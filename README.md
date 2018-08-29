@@ -27,7 +27,7 @@ make a `Podfile` in root of your project:
 platform :ios, '9.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb'
+	pod 'MopinionSDK'
 end
 ```
 

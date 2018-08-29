@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.name         = "MopinionSDKWeb"
+  s.name         = "MopinionSDK"
   s.version      = "0.1.0"
   s.summary      = "Mopinion iOS web SDK"
   s.ios.deployment_target  = '9.0'
@@ -21,12 +21,12 @@ Pod::Spec.new do |s|
   s.source = {:git => "https://github.com/mopinion/mopinion-sdk-ios-git.git", :tag => s.version}
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.ios.vendored_frameworks = 'MopinionSDKWeb.framework'
+  s.ios.vendored_frameworks = 'MopinionSDK.framework'
 
   # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.resources = "MopinionSDKWeb.framework/main.jsbundle", "MopinionSDKWeb.framework/*.ttf"
+  s.resources = "MopinionSDK.framework/main.jsbundle", "MopinionSDK.framework/*.ttf"
 
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.framework  = "MopinionSDKWeb"
+  s.framework  = "MopinionSDK"
 
 end
