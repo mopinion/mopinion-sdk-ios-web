@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.name         = "MopinionSDK"
+  s.name         = "MopinionSDKWeb"
   s.version      = "0.1.0"
   s.summary      = "Mopinion iOS web SDK"
   s.ios.deployment_target  = '9.0'
