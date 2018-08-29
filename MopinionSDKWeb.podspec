@@ -23,9 +23,6 @@ Pod::Spec.new do |s|
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.ios.vendored_frameworks = 'MopinionSDK.framework'
 
-  # ――― Resources ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.resources = "MopinionSDK.framework/main.jsbundle", "MopinionSDK.framework/*.ttf"
-
   # ――― Project Linking ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.framework  = "MopinionSDK"
 
