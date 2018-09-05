@@ -13,11 +13,8 @@ There are also other Mopinion SDK's available:
 ## Install
 
 The Mopinion Mobile SDK Framework can be installed by using the popular dependency manager [Cocoapods](https://cocoapods.org).
-The SDK is partly built with [React Native](https://facebook.github.io/react-native/), it needs some Frameworks to function.
 
-### Install with Cocoapods
-
-Install Cocoapods
+### Install Cocoapods
 
 `$ sudo gem install cocoapods`
 
@@ -27,7 +24,7 @@ make a `Podfile` in root of your project:
 platform :ios, '9.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb'
+	pod 'MopinionSDKWeb', '>= 0.1.2'
 end
 ```
 
