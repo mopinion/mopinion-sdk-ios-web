@@ -3,7 +3,7 @@
 The Mopinion Mobile SDK can be used to collect feedback from iOS apps based on events.
 To use Mopinion mobile web feedback forms in your app you can include the SDK as a Framework in your Xcode project.
 
-There are also other Mopinion SDK's available:
+Other Mopinion SDK's are also available:
 
 - [iOS SDK (React Native required)](https://github.com/mopinion/mopinion-sdk-ios)
 - [Android SDK (React Native required)](https://github.com/mopinion/mopinion-sdk-android)
@@ -24,7 +24,7 @@ make a `Podfile` in root of your project:
 platform :ios, '9.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '>= 0.3.0'
+	pod 'MopinionSDKWeb', '>= 0.3.1'
 end
 ```
 
@@ -61,6 +61,26 @@ where `"_button"` is the default passive form event.
 You can also make custom events and use them in the Mopinion deployment interface.  
 In the Mopinion system you can enable or disable the feedback form when a user of your app executes the event.
 The event could be a touch of a button, at the end of a transaction, proactive, etc.
+
+## extra data
+
+From version `0.3.1` it's also possible to send extra data from the app to your form. 
+This can be done by adding a key and a value to the `data()` method.
+The data should be added before the `event()` method is called if you want to include the data in the form that comes up for that event.
+
+```swift
+MopinionSDK.data(_key: String, _value: String)
+```
+
+Example:
+```swift
+import MopinionSDK
+...
+MopinionSDK.data("first name": "Steve")
+MopinionSDK.data("last name": "Jobs")
+...
+MopinionSDK.event(self, "_button")
+```
 
 ## Edit triggers
 
