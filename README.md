@@ -69,12 +69,14 @@ This can be done by adding a key and a value to the `data()` method.
 The data should be added before the `event()` method is called if you want to include the data in the form that comes up for that event.
 
 ```swift
-MopinionSDK.data(_key: String, _value: String)
+MopinionSDK.data(_ key: String, _ value: String)
 ```
 
 Example:
 ```swift
 import MopinionSDK
+...
+MopinionSDK.load("abcd1234")
 ...
 MopinionSDK.data("first name": "Steve")
 MopinionSDK.data("last name": "Jobs")
