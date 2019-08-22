@@ -24,7 +24,7 @@ make a `Podfile` in root of your project:
 platform :ios, '9.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '>= 0.3.3'
+	pod 'MopinionSDKWeb', '>= 0.3.4'
 end
 ```
 
@@ -78,10 +78,37 @@ import MopinionSDK
 ...
 MopinionSDK.load("abcd1234")
 ...
-MopinionSDK.data("first name": "Steve")
-MopinionSDK.data("last name": "Jobs")
+MopinionSDK.data("first name", "Steve")
+MopinionSDK.data("last name", "Jobs")
 ...
 MopinionSDK.event(self, "_button")
+```
+
+Note: In the set of meta data, the keys are unique. If you re-use a key, the previous value for that key will be overwritten.
+
+## clear extra data
+
+From version `0.3.4` it's possible to remove all or a single key-value pair from the extra data previously supplied with the `data(key,value)` method.
+To remove a single key-value pair use this method:
+
+```swift
+MopinionSDK.removeData(forKey: String)
+```
+Example:
+
+```swift
+MopinionSDK.removeData(forKey: "first name")
+```
+
+To remove all supplied extra data use this method without arguments:
+
+```swift
+MopinionSDK.removeData()
+```
+Example:
+
+```swift
+MopinionSDK.removeData()
 ```
 
 ## Edit triggers
