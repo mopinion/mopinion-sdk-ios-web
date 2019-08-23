@@ -2,11 +2,11 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "MopinionSDKWeb"
-  s.version      = "0.3.4"
+  s.version      = "0.4.0"
   s.summary      = "Mopinion iOS web SDK"
   s.ios.deployment_target  = '9.0'
   s.description  = "Mopinion mobile web SDK for iOS. Build dynamic customizable customer feedback forms for your iOS app."
-  s.homepage     = "http://mopinion.com"
+  s.homepage     = "https://mopinion.com"
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.license      = { :type => "MIT", :file => "LICENSE" }
