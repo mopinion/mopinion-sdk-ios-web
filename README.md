@@ -34,7 +34,7 @@ For Xcode 10, make a `Podfile` in root of your project:
 platform :ios, '9.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '~> 0.3.4'
+	pod 'MopinionSDKWeb', '~> 0.3.5'
 end
 ```
 
