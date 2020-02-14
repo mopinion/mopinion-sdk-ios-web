@@ -1,0 +1,42 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.1.3 (swiftlang-1100.0.282.1 clang-1100.0.33.15)
+// swift-module-flags: -target x86_64-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name MopinionSDK
+import Foundation
+@_exported import MopinionSDK
+import SafariServices
+import Swift
+import UIKit
+import WebKit
+public let MopinionSDK: MopinionSDK.Mopinion
+@objc public class Mopinion : ObjectiveC.NSObject {
+  @objc override dynamic public init()
+  public var globalParentView: UIKit.UIViewController?
+  final public let useWebView: Swift.Bool
+  public func load(_ mopinionKey: Foundation.NSString)
+  public func load(_ mopinionKey: Foundation.NSString, _ log: Swift.Bool)
+  public func event(_ parentView: UIKit.UIViewController, _ event: Swift.String)
+  public func data(_ k: Swift.String, _ v: Swift.String)
+  public func removeData(forKey k: Swift.String)
+  public func removeData()
+  public func mopinionEvent(_ event: Swift.String)
+  public func emptyCache()
+  public func close()
+  public func cleanCache()
+  public func setLog(_ on: Swift.Bool = false)
+  @objc deinit
+}
+extension Mopinion : UIKit.UINavigationBarDelegate {
+  @objc dynamic public func position(for bar: UIKit.UIBarPositioning) -> UIKit.UIBarPosition
+}
+extension Mopinion : UIKit.UIAdaptivePresentationControllerDelegate {
+  @objc dynamic public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+extension Mopinion {
+  public func customPresentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
+}
+extension Mopinion : WebKit.WKScriptMessageHandler {
+  @objc dynamic public func userContentController(_ userContentController: WebKit.WKUserContentController, didReceive message: WebKit.WKScriptMessage)
+}
+extension Mopinion : WebKit.WKNavigationDelegate {
+  @objc dynamic public func webView(_ webView: WebKit.WKWebView, decidePolicyFor navigationAction: WebKit.WKNavigationAction, decisionHandler: (WebKit.WKNavigationActionPolicy) -> Swift.Void)
+}

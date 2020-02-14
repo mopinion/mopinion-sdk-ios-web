@@ -24,7 +24,7 @@ For Xcode 11.2.1 and later (do not use Xcode 11.2, it creates broken apps), make
 platform :ios, '9.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '>= 0.4.2'
+	pod 'MopinionSDKWeb', '>= 0.4.3'
 end
 ```
 
@@ -128,7 +128,8 @@ Login to your Mopinion account and go to the form builder to use this functional
 
 The custom defined events can be used in combination with rules:
 
-* trigger: `passive` or `proactive`. A passive form always shows when the event is triggered. A proactive form only shows once, you can set the refresh time after which the form should show again.  
+* trigger: `passive` or `proactive`. A passive form always shows when the event is triggered. A proactive form only shows once, you can set the refresh duration after which the form should show again. 
+* submit: allow opening a proactive form until it has been submitted at least once. This affects the trigger rule, to allow opening a form more than once. Support for this appeared in SDK version 0.4.3.
 * percentage (proactive trigger): % of users that should see the form  
 * date: only show the form at at, after or before a specific date or date range  
 * time: only show the form at at, after or before a specific time or time range  
