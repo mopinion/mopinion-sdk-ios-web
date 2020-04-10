@@ -18,23 +18,13 @@ The Mopinion Mobile SDK Framework can be installed by using the popular dependen
 
 `$ sudo gem install cocoapods`
 
-For Xcode 11.2.1 and later (do not use Xcode 11.2, it creates broken apps), make a `Podfile` in root of your project:
+For Xcode 11.4, make a `Podfile` in root of your project:
 
 ```ruby
 platform :ios, '9.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '>= 0.4.3'
-end
-```
-
-For Xcode 10, make a `Podfile` in root of your project:
-
-```ruby
-platform :ios, '9.0'
-use_frameworks!
-target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '~> 0.3.5'
+	pod 'MopinionSDKWeb', '>= 0.4.4'
 end
 ```
 
