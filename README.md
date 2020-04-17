@@ -24,7 +24,7 @@ For Xcode 11.4, make a `Podfile` in root of your project:
 platform :ios, '9.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '>= 0.4.4'
+	pod 'MopinionSDKWeb', '>= 0.4.5'
 end
 ```
 
