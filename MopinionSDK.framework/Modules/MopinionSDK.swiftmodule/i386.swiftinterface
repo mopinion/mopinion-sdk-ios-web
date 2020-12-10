@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.2 (swiftlang-1103.0.32.1 clang-1103.0.32.29)
+// swift-compiler-version: Apple Swift version 5.3.1 (swiftlang-1200.0.41 clang-1200.0.32.8)
 // swift-module-flags: -target i386-apple-ios9.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name MopinionSDK
 import Foundation
 @_exported import MopinionSDK
@@ -7,6 +7,9 @@ import SafariServices
 import Swift
 import UIKit
 import WebKit
+public protocol MopinionOnEvaluateDelegate : AnyObject {
+  func mopinionOnEvaluateHandler(hasResult: Swift.Bool, event: Swift.String, formKey: Swift.String?, response: [Swift.String : Any]?)
+}
 public let MopinionSDK: MopinionSDK.Mopinion
 @objc @_inheritsConvenienceInitializers public class Mopinion : ObjectiveC.NSObject {
   @objc override dynamic public init()
@@ -15,9 +18,11 @@ public let MopinionSDK: MopinionSDK.Mopinion
   public func load(_ mopinionKey: Foundation.NSString)
   public func load(_ mopinionKey: Foundation.NSString, _ log: Swift.Bool)
   public func event(_ parentView: UIKit.UIViewController, _ event: Swift.String)
+  public func openFormAlways(_ parentView: UIKit.UIViewController, _ formKey: Swift.String)
   public func data(_ k: Swift.String, _ v: Swift.String)
   public func removeData(forKey k: Swift.String)
   public func removeData()
+  public func evaluate(_ event: Swift.String, onEvaluateDelegate: MopinionSDK.MopinionOnEvaluateDelegate)
   public func mopinionEvent(_ event: Swift.String)
   public func emptyCache()
   public func close()
