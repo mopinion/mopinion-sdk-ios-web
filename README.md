@@ -9,27 +9,80 @@ Other Mopinion SDK's are also available:
 - [Android SDK (React Native required)](https://github.com/mopinion/mopinion-sdk-android)
 - [Android web SDK](https://github.com/mopinion/mopinion-sdk-android-web)
 
-## Release notes for version 0.4.6
-### New features in 0.4.6
-- The new method `evaluate()` and its asynchronous callback response `mopinionOnEvaluateHandler()` as part of the protocol `MopinionOnEvaluateDelegate` allow you to verify whether or not a form would be opened for a specified event. 
-- The new method `openFormAlways()`, to be used with the response of the `mopinionOnEvaluateHandler()` method, allows you to open a form regardless of any proactive conditions set in the deployment.
+### Contents
 
+- Release notes
+- [Installation](#install)
+- [Implement the SDK](#implement)
+- [Submitting extra data](#extra-data)
+- [Evaluate if a form will open](#evaluate-conditions)
+- [Using callback mode](#callback-mode)
+- [Edit triggers](#edit-triggers)
 
-## Install
+## Release notes for version 0.5.0
+### Changes in 0.5.0
+- SDK framework format converted to xcframework. 
+
+### New features in 0.5.0
+- Support for iOS Simulator on ARM Macs.
+- 3 new variants of the method `event()` add a asynchronous callback response `onMopinionEvent()` as part of the protocol `MopinionCallbackEventDelegate`, to let you receive a certain `MopinionCallbackEvent` from the SDK about the feedback form.
+- the new variants of the method `event()` include a asynchronous callback response `onMopinionEventError()` as part of the protocol `MopinionCallbackEventErrorDelegate` to inform you of errors and allow use with delegates or closures. 
+- Currently supported `MopinionCallbackEvents` are when the form is displayed, when the user submitted the form or when the form closed.
+- The callback includes an object `MopinionResponse` that can optionally contain data associated with some events. Data can be for example the form key, the form name or miscellanous data as dictionary (Foundation representation of a JSONObject).
+- The new callback behaviour is optional. You don't need to change your existing code, the SDK by default will behave as before without making callbacks.
+
+<br>
+
+## <a name="install">Install</a>
 
 The Mopinion Mobile SDK Framework can be installed by using the popular dependency manager [Cocoapods](https://cocoapods.org).
 
-### Install Cocoapods
+### Install CocoaPods native on ARM based Macs
 
-`$ sudo gem install cocoapods`
+Macs with an ARM processor need a newer Ruby toolchain to use CocoaPods via a network. Use the latest CocoaPods version. To prevent older CocoaPods versions before 1.11 from generating ffi errors `LoadError - dlopen(/Library/Ruby/Gems/2.6.0/gems/ffi-1.14.2/lib/ffi_c.bundle, 0x0009)` causing build failures:
 
-For Xcode 12.2, make a `Podfile` in root of your project:
+1. Install the Xcode 12.5 (or later) *Command Line* tools (even if you already installed the full Xcode IDE version)
+2. Install [macports](https://macports.org)
+3. In terminal, execute 
+
+```sh
+sudo port install ruby27
+sudo port select --set ruby ruby27
+source .zprofile # or .profile, whereever you defined your $PATH
+sudo gem update
+sudo gem install ffi
+sudo gem install cocoapods
+```
+Tested to work with M1 on macOS Big Sur 11.4, Xcode 12.5, macports 2.7.1, ruby 2.7.3p183, cocoapods 1.10.1
+
+#### Reported native cocoapods install for homebrew users
+For homebrew users the procedure is a bit different, [according to github](https://github.com/CocoaPods/CocoaPods/issues/9907#issuecomment-835385306):
+
+1. Update to at least macOS Big Sur 11.3.1
+2. Install homebrew
+3. Update ruby to at least 2.7.3
+
+```sh
+brew install rbenv
+rbenv init
+rbenv install 2.7.3
+export RBENV_VERSION=2.7.3 # or however you set your ruby version
+```
+4. Install cocoapods 
+
+```sh
+brew install cocoapods
+```
+
+### Install the SDK with CocoaPods
+
+For Xcode 13, make a `Podfile` in root of your project:
 
 ```ruby
 platform :ios, '9.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '>= 0.4.6'
+	pod 'MopinionSDKWeb', '>= 0.5.0'
 end
 ```
 
@@ -39,8 +92,9 @@ Install the needed pods:
 
 After this you should use the newly made `<your-project-name>.xcworkspace` file to open in Xcode.
 
+<br>
 
-## Implement the SDK
+## <a name="implement">Implement the SDK</a>
 
 In your app code, for instance the `AppDelegate.swift` file, put:
 
@@ -67,7 +121,9 @@ You can also make custom events and use them in the Mopinion deployment interfac
 In the Mopinion system you can enable or disable the feedback form when a user of your app executes the event.
 The event could be a touch of a button, at the end of a transaction, proactive, etc.
 
-## extra data
+<br>
+
+## <a name="extra-data">extra data</a>
 
 From version `0.3.1` it's also possible to send extra data from the app to your form. 
 This can be done by adding a key and a value to the `data()` method.
@@ -78,6 +134,7 @@ MopinionSDK.data(_ key: String, _ value: String)
 ```
 
 Example:
+
 ```swift
 import MopinionSDK
 ...
@@ -116,14 +173,16 @@ Example:
 MopinionSDK.removeData()
 ```
 
-## Evaluate if a form will open
+<br>
+
+## <a name="evaluate-conditions">Evaluate if a form will open</a>
 The event() method of the SDK autonomously checks deployment conditions and opens a form, or not.
 
 From SDK version `0.4.6` you can use the evaluate() and related methods to give your app more control on opening a form for proactive events or take actions when no form would have opened.
 
 It can also be used on passive events, but such forms will always be allowed to open.
 
-###Procedure overview
+### Procedure overview
 
 1. Call the `evaluate()` method and pass it the delegate object that implements the `MopinionOnEvaluateDelegate` protocol.
 2. In your delegate's callback method `mopinionOnEvaluateHandler()`, check the response parameters and retrieve the `formKey` if there is any.
@@ -165,7 +224,7 @@ Parameters:
 * `parentView`: Your UIViewController object that can act as a parent view controller for the SDK.
 * `formKey`: key of a feedback form as provided by the mopinionOnEvaluateHandler() call.
 
-###Example of using evaluate()
+### Example of using evaluate()
 This snippet of pseudo code highlights the key points on how the aforementioned procedure fits together to implement the `MopinionOnEvaluateDelegate` protocol.
 
 ```swift
@@ -202,10 +261,162 @@ class ViewController: UIViewController, MopinionOnEvaluateDelegate {
 ...
 ```
 
-## Edit triggers
+<br>
+
+## <a name="callback-mode">Using callback mode</a>
+By default the SDK manages the feedback form autonomously without further involving your app. 
+SDK version `0.5.0` introduces callbacks to inform your code of certain actions (MopinionCallbackEvent). 
+
+Provide a callback handler to receive a response, containing either data or possible error information. 
+
+
+### Procedure overview
+
+1. Call the `event()` method and pass it a callback method that implements the `MopinionCallbackEventDelegate.onMopinionEvent` protocol.
+2. In your callback method `onMopinionEvent()`, check the kind of `mopinionEvent` and optionally call `didSucceed()` or `hasErrors()` on the `response` to check for errors.
+3. Optionally, call `hasData()` on the `response` object to check if there is data.
+4. Depending on the kind of `mopinionEvent`, check for the presence of data specified by a `ResponseDataKey` using the call `hasData(ResponseDataKey)` on the `response`.
+5. To get the data, call `getString(ResponseDataKey)` respectively `getJSONObject(ResponseDataKey)` on the `response`, depending on the type of data to retrieve.
+
+You can also provide an optional error-callback handler to `event()` to seperately receive responses with error information. In that case the primary handler only receives responses without errors.
+
+<br>
+
+### Callback variants of the `event()` method
+Triggers an event you defined in your deployment to open a form and receive MopinionCallbackEvent callbacks. If you don't specify a failHandler, the callback handler will also receive error responses.
+
+
+```swift
+func event(parentView: event: onCallbackEvent:  onCallbackEventError:)
+func event(parentView: event: onCallbackEventDelegate:)
+func event(parentView: event: onCallbackEventDelegate:  onCallbackEventErrorDelegate:)
+```
+
+Parameters:
+
+* `parentView`: The UIViewController that serves as parent view of the app.
+* `event`: The name of the event as defined in the deployment for the form. For instance "_button".
+* `onCallbackEvent`: a closure implementing the `onMopinionEvent()` callback.
+* `onCallbackEventError`: a closure implementing the `onMopinionEventError()` callback for MopinionCallbackEvents that resulted in errors.
+* `onCallbackEventDelegate`: The object implementing the `MopinionCallbackEventDelegate` protocol to handle the `onMopinionEvent()` callback.
+* `onCallbackEventErrorDelegate`: The object implementing the `MopinionCallbackEventErrorDelegate` protocol to handle the `onMopinionEventError()` callback for MopinionCallbackEvents that resulted in errors.
+
+<br>
+
+### Callback methods `onMopinionEvent()` and `onMopinionEventError()`
+
+These methods you implement in your code to receive MopinionCallbackEvents. They have the same parameters to pass you a response with optional additional information. 
+What information is provided depends on the type of `MopinionCallbackEvent` and its origin.
+
+```swift
+func onMopinionEvent(mopinionEvent: MopinionCallbackEvent, response: MopinionResponse)
+func onMopinionEventError(mopinionEvent: MopinionCallbackEvent, response: MopinionResponse)
+```
+
+Parameters:
+
+* `mopinionEvent`: The kind of response event that you receive from the SDK. Currently one of the following:
+	* `FORM_OPEN` : when the form is shown
+	* `FORM_SENT` : when the user has submitted the form
+	* `FORM_CLOSED` : when the form has closed
+
+* `response`: The MopinionResponse object containing additional information on the MopinionEvent. The response is never `nil`, but use its `hasData()` methods to check if it contains any additional data, or `hasErrors()` for errors.
+
+<br>
+
+### MopinionResponse object
+The data collection present in this object depends on the kind of MopinionCallbackEvent and its origin. The data is a key-value collection. Both data and errors can be missing. The response object contains methods to inspect and retrieve them. 
+
+
+#### Getting data with `response.get()` and `response.hasData()`
+Check with `hasData(key)` first, as the `get<>(key)` methods can return `null`. Pass a standard `ResponseDataKey` to these methods for the data you're interested in.
+
+ResponseDataKey|Method to read it|Description
+---|---|---
+DATA_JSONOBJECT|.getJSONObject()|dictionary of the 'raw' JSONObject with all available data
+FORM_KEY|.getString()|the internal unique identifier for the form
+FORM_NAME|.getString()|the name of the form. Distinct from the title of the form.
+
+<br>
+
+#### MopinionCallbackEvents and provided data in `response`
+This is the data that can be present for a certain MopinionCallbackEvent:
+
+MopinionCallbackEvent|ResponseDataKeys|Remarks
+---|---|---
+FORM_OPEN|DATA_JSONOBJECT|
+&nbsp;|FORM_KEY|
+&nbsp;|FORM_NAME|
+FORM_SENT|DATA_JSONOBJECT|
+&nbsp;|FORM_KEY|
+&nbsp;|FORM_NAME|
+FORM_CLOSED|DATA_JSONOBJECT|Currently only automatically closed forms provide data 
+&nbsp;|FORM_KEY|only when autoclosed
+&nbsp;|FORM_NAME|only when autoclosed
+
+The order in which MopinionCallbackEvents occur is:
+
+	1. FORM_OPEN
+	2. FORM_SENT (only if the user submits a form)
+	3. FORM_CLOSED
+
+<br>
+
+#### Reading `response` errors
+Call `response.hasErrors()` , followed by `response.getError()` to get the error object.
+The `getError()` method might return `nil`.
+
+<br>
+
+### Callback handler example to run code after send
+Pseudo code to show the usage of the `event()` callback with closures and some involved objects to implement running code after send.
+You must wait for the form to be closed after send before running any code affecting your own UI.
+
+```swift
+...
+import MopinionSDK
+...
+// assuming that in your AppDelegate, you already did MopinionSDK.load(<MOPINION DEPLOYMENT KEY>)
+...
+class YourViewController: UIViewController, MopinionOnEvaluateDelegate {
+...
+    var wasFormSent: Bool = false	// track state outside closure
+...
+    func demonstrateMopinionCallback() {
+        self.wasFormSent = false
+    
+        // open the form associated with the event "_myfeedbackbutton" from the deployment and receive callbacks in the closures        
+        MopinionSDK.event(self, "_myfeedbackbutton", onCallbackEvent: {  (mopinionEvent, response) -> (Void) in
+            print("callback in success closure")
+            if(mopinionEvent == .FORM_SENT) {
+                let formKey = response.getString(.FORM_KEY)!
+                print("The form with formKey=\(formKey) has been sent, but is still displayed")
+                self.wasFormSent = true
+            } else if(mopinionEvent == .FORM_CLOSED) {
+                if(self.wasFormSent) {
+                    let formKey = response.getString(.FORM_KEY) ?? ""
+                    print("The form \(formKey) has beent sent and closed, now you can run some code.")
+                }
+            }
+
+        }, onCallbackEventError: { (mopinionEvent, response) -> (Void) in
+            let myError = response.getError();
+            print("there was an error during callback: \(String(describing: myError))")
+        } )
+	}
+...
+}
+...
+```
+
+<br>
+
+## <a name="edit-triggers">Edit triggers</a>
 
 In the Mopinion deployment editor you can define event names and triggers that will work with the SDK event names that you used in your app.
 Login to your Mopinion account and go to Data collection, Deployments to use this functionality.
+
+![Deployment Editor](images/deployment_edit_triggers.png)
 
 The custom defined events can be used in combination with rules/conditions:
 
