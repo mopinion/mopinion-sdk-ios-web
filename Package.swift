@@ -3,7 +3,7 @@
 
 import PackageDescription
 
-let version = "0.5.0"
+let version = "0.5.0-RC-1"
 
 let package = Package(
     name: "MopinionSDK",
@@ -24,9 +24,10 @@ let package = Package(
 //        .binaryTarget(
 //            name: "MopinionSDK",
 //            path: "MopinionSDK.xcframework")
+	// Remote package. Must use https:// and .zip .Note: using file: for the URL won't load or link the binaryTarget.
        .binaryTarget(
        		name: "MopinionSDK",
-       		url: "file:/Users/large/Dev/Mopinion/deploy/github.com/mopinion-sdk-ios-web/MopinionSDK-0.5.0.xcframework.zip",
+       		url: "https://github.com/mopinion/spm-x/releases/download/0.4.9/MopinionSDK-0.5.0.xcframework.zip",
        		checksum: "8dff1a895f4229d8ff307a6c402d06fdbfff789dbe6897ae8f980371ae1e1eda")     
     ]
 )
