@@ -15,21 +15,10 @@ let package = Package(
             name: "MopinionSDK",
             targets: ["MopinionSDK"]),
     ],
-    dependencies: [
-        // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-    ],
     targets: [
-        // Targets are the basic building blocks of a package. A target can define a module or a test suite.
-        // Targets can depend on other targets in this package, and on products in packages this package depends on.
-        // enable if you want to test with a local package
-//        .binaryTarget(
-//            name: "MopinionSDK",
-//            path: "MopinionSDK.xcframework")
-	// Remote package. Must use https:// and .zip .Note: using file: for the URL won't load or link the binaryTarget.
        .binaryTarget(
        		name: "MopinionSDK",
-       		url: "https://github.com/mopinion/spm-x/releases/download/\(githubReleaseDir)/MopinionSDK-\(sdkVersion).xcframework.zip",
+       		url: "https://github.com/mopinion/mopinion-sdk-ios-web/releases/download/\(githubReleaseDir)/MopinionSDK-\(sdkVersion).xcframework.zip",
        		checksum: sdkZipfileChecksum )     
     ]
 )

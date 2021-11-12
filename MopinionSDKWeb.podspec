@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target  = '9.0'
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
-  s.source = {:http => "https://github.com/mopinion/spm-x/releases/download/0.5.0-swiftpm/MopinionSDK-0.5.0.xcframework.zip"}
+  s.source = {:http => "https://github.com/mopinion/mopinion-sdk-ios-web/releases/download/0.5.0-swiftpm/MopinionSDK-0.5.0.xcframework.zip"}
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.ios.vendored_frameworks = 'MopinionSDK.xcframework'
