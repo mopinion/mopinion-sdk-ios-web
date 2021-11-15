@@ -24,6 +24,7 @@ Other Mopinion SDK's are also available:
 - SDK framework format converted to xcframework. 
 
 ### New features in 0.5.0
+- Support for Swift Package Manager 5.3, in github release 0.5.0-swiftpm.
 - Support for iOS Simulator on ARM Macs.
 - 3 new variants of the method `event()` add a asynchronous callback response `onMopinionEvent()` as part of the protocol `MopinionCallbackEventDelegate`, to let you receive a certain `MopinionCallbackEvent` from the SDK about the feedback form.
 - the new variants of the method `event()` include a asynchronous callback response `onMopinionEventError()` as part of the protocol `MopinionCallbackEventErrorDelegate` to inform you of errors and allow use with delegates or closures. 
@@ -35,7 +36,21 @@ Other Mopinion SDK's are also available:
 
 ## <a name="install">Install</a>
 
-The Mopinion Mobile SDK Framework can be installed by using the popular dependency manager [Cocoapods](https://cocoapods.org).
+The Mopinion Mobile SDK Framework can be installed via either the Swift Package Manager or the popular dependency manager [Cocoapods](https://cocoapods.org).
+
+### Install via Swift Package Manager in Xcode 13
+1. If you no longer want to use CocoaPods for your project, then in terminal, at the root folder of your project execute: <br>
+`pod deintegrate`
+
+2. Open your project's `<your-project-name>.xcodeproj` file in Xcode.
+3. In Xcode 13, from the menu, select `File -> Add Packages…`.  
+The Swift Package Collections panel appears. 
+4. In the search field of the panel, enter `https://github.com/mopinion/mopinion-sdk-ios-web` and press enter.
+5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.5.0-swiftpm`.
+6. Click the button `Add Package`. A package product selection panel appears.
+7. Choose `MopinionSDK` and click the button `Add Package`. 
+
+<br>
 
 ### Install CocoaPods native on ARM based Macs
 
