@@ -19,18 +19,10 @@ Other Mopinion SDK's are also available:
 - [Using callback mode](#callback-mode)
 - [Edit triggers](#edit-triggers)
 
-## Release notes for version 0.5.0
-### Changes in 0.5.0
-- SDK framework format converted to xcframework. 
-
-### New features in 0.5.0
-- Support for Swift Package Manager 5.3.
-- Support for iOS Simulator on ARM Macs.
-- 3 new variants of the method `event()` add a asynchronous callback response `onMopinionEvent()` as part of the protocol `MopinionCallbackEventDelegate`, to let you receive a certain `MopinionCallbackEvent` from the SDK about the feedback form.
-- the new variants of the method `event()` include a asynchronous callback response `onMopinionEventError()` as part of the protocol `MopinionCallbackEventErrorDelegate` to inform you of errors and allow use with delegates or closures. 
-- Currently supported `MopinionCallbackEvents` are when the form is displayed, when the user submitted the form or when the form closed.
-- The callback includes an object `MopinionResponse` that can optionally contain data associated with some events. Data can be for example the form key, the form name or miscellanous data as dictionary (Foundation representation of a JSONObject).
-- The new callback behaviour is optional. You don't need to change your existing code, the SDK by default will behave as before without making callbacks.
+## Release notes for version 0.5.1
+### Improvements in 0.5.1
+- Fixed an issue with iOS 15 where the extra/meta data and screenshot could disappear.
+- The fix will also published for Swift Package Manager, in github release 0.5.1-swiftpm.
 
 <br>
 
@@ -46,7 +38,7 @@ The Mopinion Mobile SDK Framework can be installed via either the Swift Package 
 3. In Xcode 13, from the menu, select `File -> Add Packages…`.  
 The Swift Package Collections panel appears. 
 4. In the search field of the panel, enter `https://github.com/mopinion/mopinion-sdk-ios-web` and press enter.
-5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.5.0-swiftpm`.
+5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.5.1-swiftpm`.
 6. Click the button `Add Package`. A package product selection panel appears.
 7. Choose `MopinionSDK` and click the button `Add Package`. 
 
@@ -54,7 +46,16 @@ The Swift Package Collections panel appears.
 
 ### Install CocoaPods native on ARM based Macs
 
-Macs with an ARM processor need a newer Ruby toolchain to use CocoaPods via a network. Use the latest CocoaPods version. To prevent older CocoaPods versions before 1.11 from generating ffi errors `LoadError - dlopen(/Library/Ruby/Gems/2.6.0/gems/ffi-1.14.2/lib/ffi_c.bundle, 0x0009)` causing build failures:
+For macOS Monterey 12.1 installation of cocoapods 1.11.2 works out of the box:
+
+```sh
+sudo gem install cocoapods
+```
+If you had applied the below patch on macOS Big Sur 11, remove it before installation.
+
+### Patch to install earlier CocoaPods native on ARM based Macs 
+Macs with an ARM processor need a newer Ruby toolchain to use CocoaPods via a network. Not needed for cocoapods 1.11.2 and macOS Monterey, but for macOS Big Sur you can try this procedure.
+0.5.1To prevent older CocoaPods versions before 1.11 from generating ffi errors `LoadError - dlopen(/Library/Ruby/Gems/2.6.0/gems/ffi-1.14.2/lib/ffi_c.bundle, 0x0009)` causing build failures:
 
 1. Install the Xcode 12.5 (or later) *Command Line* tools (even if you already installed the full Xcode IDE version)
 2. Install [macports](https://macports.org)
@@ -97,7 +98,7 @@ For Xcode 13, make a `Podfile` in root of your project:
 platform :ios, '9.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '>= 0.5.0'
+	pod 'MopinionSDKWeb', '>= 0.5.1'
 end
 ```
 

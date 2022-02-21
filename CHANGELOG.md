@@ -1,3 +1,9 @@
+# 0.5.0
+- SDK framework format converted to xcframework. 
+- Support for Swift Package Manager 5.3, in github release 0.5.0-swiftpm.
+- Support for iOS Simulator on ARM Macs.
+- Introduced `MopinionCallbackEvents` for when a form is displayed, the user has submitted a form or when a form closed.
+
 # 0.4.6
 - New method `evaluate()` and its asynchronous callback response `mopinionOnEvaluateHandler()` as part of the protocol `MopinionOnEvaluateDelegate` to verify whether or not a form would be opened for a specified event. 
 - New method `openFormAlways()`, to be used with the `mopinionOnEvaluateHandler()` method, to open a form regardless of any proactive conditions in the deployment.
