@@ -22,7 +22,11 @@ Other Mopinion SDK's are also available:
 ## Release notes for version 0.5.1
 ### Improvements in 0.5.1
 - Fixed an issue with iOS 15 where the extra/meta data and screenshot could disappear.
-- The fix will also published for Swift Package Manager, in github release 0.5.1-swiftpm.
+
+### Remarks
+- This github release 0.5.1-swiftpm is our sdk version 0.5.1 repackaged for Swift Package Manager.
+- For cocoapods, use the 0.5.1 version from the master branch.
+
 
 <br>
 
