@@ -58,7 +58,8 @@ If you had applied the below patch on macOS Big Sur 11, remove it before install
 
 ### Patch to install earlier CocoaPods native on ARM based Macs 
 Macs with an ARM processor need a newer Ruby toolchain to use CocoaPods via a network. Not needed for cocoapods 1.11.2 and macOS Monterey, but for macOS Big Sur you can try this procedure.
-0.5.1To prevent older CocoaPods versions before 1.11 from generating ffi errors `LoadError - dlopen(/Library/Ruby/Gems/2.6.0/gems/ffi-1.14.2/lib/ffi_c.bundle, 0x0009)` causing build failures:
+
+To prevent older CocoaPods versions before 1.11 from generating ffi errors `LoadError - dlopen(/Library/Ruby/Gems/2.6.0/gems/ffi-1.14.2/lib/ffi_c.bundle, 0x0009)` causing build failures:
 
 1. Install the Xcode 12.5 (or later) *Command Line* tools (even if you already installed the full Xcode IDE version)
 2. Install [macports](https://macports.org)
@@ -126,9 +127,9 @@ MopinionSDK.load(<MOPINION DEPLOYMENT KEY>, true)
 MopinionSDK.load(<MOPINION DEPLOYMENT KEY>)
 ```
 
-The `<MOPINION DEPLOYMENT KEY>` should be replaced with your specific deployment key. This key can be found in your Mopinion account at the `Feedback forms` section under `Deployments`.
+The `<MOPINION DEPLOYMENT KEY>` should be replaced with your specific deployment key. Copy this key using a web browser from your Mopinion account, in side menu `Data collection`, section `Deployments`, via the button with symbol `<>`.
 
-in a UIViewController, for example `ViewController.swift`, put:
+In a UIViewController, for example `ViewController.swift`, put:
 
 ```swift
 import MopinionSDK
