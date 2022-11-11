@@ -1,3 +1,6 @@
+# 0.5.1
+- Fixed an issue with iOS 15 where the extra/meta data and screenshot could disappear.
+
 # 0.5.0
 - SDK framework format converted to xcframework. 
 - Support for Swift Package Manager 5.3, in github release 0.5.0-swiftpm.

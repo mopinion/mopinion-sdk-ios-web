@@ -1,0 +1,2728 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MopinionSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MopinionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MopinionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SafariServices",
+        "printedName": "SafariServices",
+        "declKind": "Import",
+        "moduleName": "MopinionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "WebKit",
+        "printedName": "WebKit",
+        "declKind": "Import",
+        "moduleName": "MopinionSDK"
+      },
+      {
+        "kind": "Var",
+        "name": "MopinionSDK",
+        "printedName": "MopinionSDK",
+        "children": [
+          {
+            "kind": "TypeNominal",
+            "name": "Mopinion",
+            "printedName": "MopinionSDK.Mopinion",
+            "usr": "c:@M@MopinionSDK@objc(cs)Mopinion"
+          }
+        ],
+        "declKind": "Var",
+        "usr": "s:11MopinionSDKA2A0A0Cvp",
+        "mangledName": "$s11MopinionSDKA2A0A0Cvp",
+        "moduleName": "MopinionSDK",
+        "declAttributes": [
+          "HasInitialValue",
+          "HasStorage",
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "isLet": true,
+        "hasStorage": true,
+        "accessors": [
+          {
+            "kind": "Accessor",
+            "name": "Get",
+            "printedName": "Get()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Mopinion",
+                "printedName": "MopinionSDK.Mopinion",
+                "usr": "c:@M@MopinionSDK@objc(cs)Mopinion"
+              }
+            ],
+            "declKind": "Accessor",
+            "usr": "s:11MopinionSDKA2A0A0Cvg",
+            "mangledName": "$s11MopinionSDKA2A0A0Cvg",
+            "moduleName": "MopinionSDK",
+            "implicit": true,
+            "accessorKind": "get"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "Mopinion",
+        "printedName": "Mopinion",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Mopinion",
+                "printedName": "MopinionSDK.Mopinion",
+                "usr": "c:@M@MopinionSDK@objc(cs)Mopinion"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MopinionSDK@objc(cs)Mopinion(im)init",
+            "mangledName": "$s11MopinionSDK0A0CACycfc",
+            "moduleName": "MopinionSDK",
+            "overriding": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "globalParentView",
+            "printedName": "globalParentView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "UIKit.UIViewController?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIViewController",
+                    "printedName": "UIKit.UIViewController",
+                    "usr": "c:objc(cs)UIViewController"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MopinionSDK0A0C16globalParentViewSo16UIViewControllerCSgvp",
+            "mangledName": "$s11MopinionSDK0A0C16globalParentViewSo16UIViewControllerCSgvp",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIViewController?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MopinionSDK0A0C16globalParentViewSo16UIViewControllerCSgvg",
+                "mangledName": "$s11MopinionSDK0A0C16globalParentViewSo16UIViewControllerCSgvg",
+                "moduleName": "MopinionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "UIKit.UIViewController?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "UIViewController",
+                        "printedName": "UIKit.UIViewController",
+                        "usr": "c:objc(cs)UIViewController"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MopinionSDK0A0C16globalParentViewSo16UIViewControllerCSgvs",
+                "mangledName": "$s11MopinionSDK0A0C16globalParentViewSo16UIViewControllerCSgvs",
+                "moduleName": "MopinionSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MopinionSDK0A0C16globalParentViewSo16UIViewControllerCSgvM",
+                "mangledName": "$s11MopinionSDK0A0C16globalParentViewSo16UIViewControllerCSgvM",
+                "moduleName": "MopinionSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "useWebView",
+            "printedName": "useWebView",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MopinionSDK0A0C10useWebViewSbvp",
+            "mangledName": "$s11MopinionSDK0A0C10useWebViewSbvp",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MopinionSDK0A0C10useWebViewSbvg",
+                "mangledName": "$s11MopinionSDK0A0C10useWebViewSbvg",
+                "moduleName": "MopinionSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "load",
+            "printedName": "load(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSString",
+                "printedName": "Foundation.NSString",
+                "usr": "c:objc(cs)NSString"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C4loadyySo8NSStringCF",
+            "mangledName": "$s11MopinionSDK0A0C4loadyySo8NSStringCF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "load",
+            "printedName": "load(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "NSString",
+                "printedName": "Foundation.NSString",
+                "usr": "c:objc(cs)NSString"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C4loadyySo8NSStringC_SbtF",
+            "mangledName": "$s11MopinionSDK0A0C4loadyySo8NSStringC_SbtF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "event",
+            "printedName": "event(_:_:onCallbackEvent:onCallbackEventError:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MopinionSDK.MopinionCallbackEvent, MopinionSDK.MopinionResponse) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Tuple",
+                    "printedName": "(MopinionSDK.MopinionCallbackEvent, MopinionSDK.MopinionResponse)",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MopinionCallbackEvent",
+                        "printedName": "MopinionSDK.MopinionCallbackEvent",
+                        "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MopinionResponse",
+                        "printedName": "MopinionSDK.MopinionResponse",
+                        "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "((MopinionSDK.MopinionCallbackEvent, MopinionSDK.MopinionResponse) -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(MopinionSDK.MopinionCallbackEvent, MopinionSDK.MopinionResponse) -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(MopinionSDK.MopinionCallbackEvent, MopinionSDK.MopinionResponse)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "MopinionCallbackEvent",
+                            "printedName": "MopinionSDK.MopinionCallbackEvent",
+                            "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "MopinionResponse",
+                            "printedName": "MopinionSDK.MopinionResponse",
+                            "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C5event__15onCallbackEvent0deF5ErrorySo16UIViewControllerC_SSyAA0aeF0O_AA0A8ResponseCtcyAJ_ALtcSgtF",
+            "mangledName": "$s11MopinionSDK0A0C5event__15onCallbackEvent0deF5ErrorySo16UIViewControllerC_SSyAA0aeF0O_AA0A8ResponseCtcyAJ_ALtcSgtF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "event",
+            "printedName": "event(_:_:onCallbackEventDelegate:onCallbackEventErrorDelegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MopinionSDK.MopinionCallbackEventDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MopinionCallbackEventDelegate",
+                    "printedName": "MopinionSDK.MopinionCallbackEventDelegate",
+                    "usr": "s:11MopinionSDK0A21CallbackEventDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MopinionSDK.MopinionCallbackEventErrorDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MopinionCallbackEventErrorDelegate",
+                    "printedName": "MopinionSDK.MopinionCallbackEventErrorDelegate",
+                    "usr": "s:11MopinionSDK0A26CallbackEventErrorDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C5event__23onCallbackEventDelegate0def5ErrorG0ySo16UIViewControllerC_SSAA0aefG0_pSgAA0aefhG0_pSgtF",
+            "mangledName": "$s11MopinionSDK0A0C5event__23onCallbackEventDelegate0def5ErrorG0ySo16UIViewControllerC_SSAA0aefG0_pSgAA0aefhG0_pSgtF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "event",
+            "printedName": "event(_:_:onCallbackEventDelegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MopinionSDK.MopinionCallbackEventDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MopinionCallbackEventDelegate",
+                    "printedName": "MopinionSDK.MopinionCallbackEventDelegate",
+                    "usr": "s:11MopinionSDK0A21CallbackEventDelegateP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C5event__23onCallbackEventDelegateySo16UIViewControllerC_SSAA0aefG0_pSgtF",
+            "mangledName": "$s11MopinionSDK0A0C5event__23onCallbackEventDelegateySo16UIViewControllerC_SSAA0aefG0_pSgtF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "event",
+            "printedName": "event(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C5eventyySo16UIViewControllerC_SStF",
+            "mangledName": "$s11MopinionSDK0A0C5eventyySo16UIViewControllerC_SStF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "openFormAlways",
+            "printedName": "openFormAlways(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIViewController",
+                "printedName": "UIKit.UIViewController",
+                "usr": "c:objc(cs)UIViewController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C14openFormAlwaysyySo16UIViewControllerC_SStF",
+            "mangledName": "$s11MopinionSDK0A0C14openFormAlwaysyySo16UIViewControllerC_SStF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "data",
+            "printedName": "data(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C4datayySS_SStF",
+            "mangledName": "$s11MopinionSDK0A0C4datayySS_SStF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeData",
+            "printedName": "removeData(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C10removeData6forKeyySS_tF",
+            "mangledName": "$s11MopinionSDK0A0C10removeData6forKeyySS_tF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "removeData",
+            "printedName": "removeData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C10removeDatayyF",
+            "mangledName": "$s11MopinionSDK0A0C10removeDatayyF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "evaluate",
+            "printedName": "evaluate(_:onEvaluateDelegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MopinionOnEvaluateDelegate",
+                "printedName": "MopinionSDK.MopinionOnEvaluateDelegate",
+                "usr": "s:11MopinionSDK0A18OnEvaluateDelegateP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C8evaluate_18onEvaluateDelegateySS_AA0a2OneF0_ptF",
+            "mangledName": "$s11MopinionSDK0A0C8evaluate_18onEvaluateDelegateySS_AA0a2OneF0_ptF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "emptyCache",
+            "printedName": "emptyCache()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C10emptyCacheyyF",
+            "mangledName": "$s11MopinionSDK0A0C10emptyCacheyyF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "close",
+            "printedName": "close()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C5closeyyF",
+            "mangledName": "$s11MopinionSDK0A0C5closeyyF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "cleanCache",
+            "printedName": "cleanCache()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C10cleanCacheyyF",
+            "mangledName": "$s11MopinionSDK0A0C10cleanCacheyyF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setLog",
+            "printedName": "setLog(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C6setLogyySbF",
+            "mangledName": "$s11MopinionSDK0A0C6setLogyySbF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "position",
+            "printedName": "position(for:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UIBarPosition",
+                "printedName": "UIKit.UIBarPosition",
+                "usr": "c:@E@UIBarPosition"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIBarPositioning",
+                "printedName": "UIKit.UIBarPositioning",
+                "usr": "c:objc(pl)UIBarPositioning"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@MopinionSDK@objc(cs)Mopinion(im)positionForBar:",
+            "mangledName": "$s11MopinionSDK0A0C8position3forSo13UIBarPositionVSo0E11Positioning_p_tF",
+            "moduleName": "MopinionSDK",
+            "objc_name": "positionForBar:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "presentationControllerDidDismiss",
+            "printedName": "presentationControllerDidDismiss(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIPresentationController",
+                "printedName": "UIKit.UIPresentationController",
+                "usr": "c:objc(cs)UIPresentationController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@MopinionSDK@objc(cs)Mopinion(im)presentationControllerDidDismiss:",
+            "mangledName": "$s11MopinionSDK0A0C32presentationControllerDidDismissyySo014UIPresentationD0CF",
+            "moduleName": "MopinionSDK",
+            "objc_name": "presentationControllerDidDismiss:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Custom",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "customPresentationControllerDidDismiss",
+            "printedName": "customPresentationControllerDidDismiss(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UIPresentationController",
+                "printedName": "UIKit.UIPresentationController",
+                "usr": "c:objc(cs)UIPresentationController"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A0C38customPresentationControllerDidDismissyySo014UIPresentationE0CF",
+            "mangledName": "$s11MopinionSDK0A0C38customPresentationControllerDidDismissyySo014UIPresentationE0CF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "userContentController",
+            "printedName": "userContentController(_:didReceive:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKUserContentController",
+                "printedName": "WebKit.WKUserContentController",
+                "usr": "c:objc(cs)WKUserContentController"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKScriptMessage",
+                "printedName": "WebKit.WKScriptMessage",
+                "usr": "c:objc(cs)WKScriptMessage"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@MopinionSDK@objc(cs)Mopinion(im)userContentController:didReceiveScriptMessage:",
+            "mangledName": "$s11MopinionSDK0A0C21userContentController_10didReceiveySo06WKUserdE0C_So15WKScriptMessageCtF",
+            "moduleName": "MopinionSDK",
+            "objc_name": "userContentController:didReceiveScriptMessage:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "webView",
+            "printedName": "webView(_:decidePolicyFor:decisionHandler:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKWebView",
+                "printedName": "WebKit.WKWebView",
+                "usr": "c:objc(cs)WKWebView"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "WKNavigationAction",
+                "printedName": "WebKit.WKNavigationAction",
+                "usr": "c:objc(cs)WKNavigationAction"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(WebKit.WKNavigationActionPolicy) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "WKNavigationActionPolicy",
+                    "printedName": "WebKit.WKNavigationActionPolicy",
+                    "usr": "c:@E@WKNavigationActionPolicy"
+                  }
+                ],
+                "typeAttributes": [
+                  "noescape"
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@CM@MopinionSDK@objc(cs)Mopinion(im)webView:decidePolicyForNavigationAction:decisionHandler:",
+            "mangledName": "$s11MopinionSDK0A0C7webView_15decidePolicyFor15decisionHandlerySo05WKWebD0C_So18WKNavigationActionCySo0klF0VXEtF",
+            "moduleName": "MopinionSDK",
+            "objc_name": "webView:decidePolicyForNavigationAction:decisionHandler:",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@MopinionSDK@objc(cs)Mopinion",
+        "mangledName": "$s11MopinionSDK0A0C",
+        "moduleName": "MopinionSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "inheritsConvenienceInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MopinionSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MopinionSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MopinionSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MopinionSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "MopinionSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "MopinionSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MopinionOnEvaluateDelegate",
+        "printedName": "MopinionOnEvaluateDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "mopinionOnEvaluateHandler",
+            "printedName": "mopinionOnEvaluateHandler(hasResult:event:formKey:response:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A18OnEvaluateDelegateP08mopinioncD7Handler9hasResult5event7formKey8responseySb_S2SSgSDySSypGSgtF",
+            "mangledName": "$s11MopinionSDK0A18OnEvaluateDelegateP08mopinioncD7Handler9hasResult5event7formKey8responseySb_S2SSgSDySSypGSgtF",
+            "moduleName": "MopinionSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : MopinionSDK.MopinionOnEvaluateDelegate>",
+            "sugared_genericSig": "<Self where Self : MopinionSDK.MopinionOnEvaluateDelegate>",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11MopinionSDK0A18OnEvaluateDelegateP",
+        "mangledName": "$s11MopinionSDK0A18OnEvaluateDelegateP",
+        "moduleName": "MopinionSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MopinionCallbackEvent",
+        "printedName": "MopinionCallbackEvent",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "FORM_CLOSED",
+            "printedName": "FORM_CLOSED",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MopinionSDK.MopinionCallbackEvent.Type) -> MopinionSDK.MopinionCallbackEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MopinionCallbackEvent",
+                    "printedName": "MopinionSDK.MopinionCallbackEvent",
+                    "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MopinionSDK.MopinionCallbackEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MopinionCallbackEvent",
+                        "printedName": "MopinionSDK.MopinionCallbackEvent",
+                        "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent@MopinionCallbackEventFORM_CLOSED",
+            "mangledName": "$s11MopinionSDK0A13CallbackEventO11FORM_CLOSEDyA2CmF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "FORM_OPEN",
+            "printedName": "FORM_OPEN",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MopinionSDK.MopinionCallbackEvent.Type) -> MopinionSDK.MopinionCallbackEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MopinionCallbackEvent",
+                    "printedName": "MopinionSDK.MopinionCallbackEvent",
+                    "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MopinionSDK.MopinionCallbackEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MopinionCallbackEvent",
+                        "printedName": "MopinionSDK.MopinionCallbackEvent",
+                        "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent@MopinionCallbackEventFORM_OPEN",
+            "mangledName": "$s11MopinionSDK0A13CallbackEventO9FORM_OPENyA2CmF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "FORM_SENT",
+            "printedName": "FORM_SENT",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MopinionSDK.MopinionCallbackEvent.Type) -> MopinionSDK.MopinionCallbackEvent",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MopinionCallbackEvent",
+                    "printedName": "MopinionSDK.MopinionCallbackEvent",
+                    "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MopinionSDK.MopinionCallbackEvent.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "MopinionCallbackEvent",
+                        "printedName": "MopinionSDK.MopinionCallbackEvent",
+                        "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent@MopinionCallbackEventFORM_SENT",
+            "mangledName": "$s11MopinionSDK0A13CallbackEventO9FORM_SENTyA2CmF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MopinionSDK.MopinionCallbackEvent?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "MopinionCallbackEvent",
+                    "printedName": "MopinionSDK.MopinionCallbackEvent",
+                    "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MopinionSDK0A13CallbackEventO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11MopinionSDK0A13CallbackEventO8rawValueACSgSi_tcfc",
+            "moduleName": "MopinionSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MopinionSDK0A13CallbackEventO8rawValueSivp",
+            "mangledName": "$s11MopinionSDK0A13CallbackEventO8rawValueSivp",
+            "moduleName": "MopinionSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MopinionSDK0A13CallbackEventO8rawValueSivg",
+                "mangledName": "$s11MopinionSDK0A13CallbackEventO8rawValueSivg",
+                "moduleName": "MopinionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent",
+        "mangledName": "$s11MopinionSDK0A13CallbackEventO",
+        "moduleName": "MopinionSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "ResponseDataKey",
+        "printedName": "ResponseDataKey",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "DATA_JSONOBJECT",
+            "printedName": "DATA_JSONOBJECT",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MopinionSDK.ResponseDataKey.Type) -> MopinionSDK.ResponseDataKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ResponseDataKey",
+                    "printedName": "MopinionSDK.ResponseDataKey",
+                    "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MopinionSDK.ResponseDataKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ResponseDataKey",
+                        "printedName": "MopinionSDK.ResponseDataKey",
+                        "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MopinionSDK@E@ResponseDataKey@ResponseDataKeyDATA_JSONOBJECT",
+            "mangledName": "$s11MopinionSDK15ResponseDataKeyO15DATA_JSONOBJECTyA2CmF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 0
+          },
+          {
+            "kind": "Var",
+            "name": "FORM_KEY",
+            "printedName": "FORM_KEY",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MopinionSDK.ResponseDataKey.Type) -> MopinionSDK.ResponseDataKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ResponseDataKey",
+                    "printedName": "MopinionSDK.ResponseDataKey",
+                    "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MopinionSDK.ResponseDataKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ResponseDataKey",
+                        "printedName": "MopinionSDK.ResponseDataKey",
+                        "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MopinionSDK@E@ResponseDataKey@ResponseDataKeyFORM_KEY",
+            "mangledName": "$s11MopinionSDK15ResponseDataKeyO8FORM_KEYyA2CmF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 1
+          },
+          {
+            "kind": "Var",
+            "name": "FORM_NAME",
+            "printedName": "FORM_NAME",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(MopinionSDK.ResponseDataKey.Type) -> MopinionSDK.ResponseDataKey",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ResponseDataKey",
+                    "printedName": "MopinionSDK.ResponseDataKey",
+                    "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "MopinionSDK.ResponseDataKey.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ResponseDataKey",
+                        "printedName": "MopinionSDK.ResponseDataKey",
+                        "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "c:@M@MopinionSDK@E@ResponseDataKey@ResponseDataKeyFORM_NAME",
+            "mangledName": "$s11MopinionSDK15ResponseDataKeyO9FORM_NAMEyA2CmF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "ObjC"
+            ],
+            "fixedbinaryorder": 2
+          },
+          {
+            "kind": "Var",
+            "name": "stringValue",
+            "printedName": "stringValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MopinionSDK15ResponseDataKeyO11stringValueSSvp",
+            "mangledName": "$s11MopinionSDK15ResponseDataKeyO11stringValueSSvp",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MopinionSDK15ResponseDataKeyO11stringValueSSvg",
+                "mangledName": "$s11MopinionSDK15ResponseDataKeyO11stringValueSSvg",
+                "moduleName": "MopinionSDK",
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "MopinionSDK.ResponseDataKey?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ResponseDataKey",
+                    "printedName": "MopinionSDK.ResponseDataKey",
+                    "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:11MopinionSDK15ResponseDataKeyO8rawValueACSgSi_tcfc",
+            "mangledName": "$s11MopinionSDK15ResponseDataKeyO8rawValueACSgSi_tcfc",
+            "moduleName": "MopinionSDK",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:11MopinionSDK15ResponseDataKeyO8rawValueSivp",
+            "mangledName": "$s11MopinionSDK15ResponseDataKeyO8rawValueSivp",
+            "moduleName": "MopinionSDK",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:11MopinionSDK15ResponseDataKeyO8rawValueSivg",
+                "mangledName": "$s11MopinionSDK15ResponseDataKeyO8rawValueSivg",
+                "moduleName": "MopinionSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "c:@M@MopinionSDK@E@ResponseDataKey",
+        "mangledName": "$s11MopinionSDK15ResponseDataKeyO",
+        "moduleName": "MopinionSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "enumRawTypeName": "Int",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MopinionResponse",
+        "printedName": "MopinionResponse",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "hasData",
+            "printedName": "hasData()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse(im)hasData",
+            "mangledName": "$s11MopinionSDK0A8ResponseC7hasDataSbyF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasData",
+            "printedName": "hasData(forKey:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ResponseDataKey",
+                "printedName": "MopinionSDK.ResponseDataKey",
+                "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse(im)hasDataForKey:",
+            "mangledName": "$s11MopinionSDK0A8ResponseC7hasData6forKeySbAA0ceG0O_tF",
+            "moduleName": "MopinionSDK",
+            "objc_name": "hasDataForKey:",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "didSucceed",
+            "printedName": "didSucceed()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse(im)didSucceed",
+            "mangledName": "$s11MopinionSDK0A8ResponseC10didSucceedSbyF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasErrors",
+            "printedName": "hasErrors()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse(im)hasErrors",
+            "mangledName": "$s11MopinionSDK0A8ResponseC9hasErrorsSbyF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getData",
+            "printedName": "getData(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ResponseDataKey",
+                "printedName": "MopinionSDK.ResponseDataKey",
+                "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A8ResponseC7getDataySSSgAA0cE3KeyOF",
+            "mangledName": "$s11MopinionSDK0A8ResponseC7getDataySSSgAA0cE3KeyOF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getData",
+            "printedName": "getData(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ResponseDataKey",
+                "printedName": "MopinionSDK.ResponseDataKey",
+                "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A8ResponseC7getDataySayypGSgAA0cE3KeyOF",
+            "mangledName": "$s11MopinionSDK0A8ResponseC7getDataySayypGSgAA0cE3KeyOF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getData",
+            "printedName": "getData(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ResponseDataKey",
+                "printedName": "MopinionSDK.ResponseDataKey",
+                "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse(im)getData:",
+            "mangledName": "$s11MopinionSDK0A8ResponseC7getDataySDySSypGSgAA0cE3KeyOF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getError",
+            "printedName": "getError()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Error?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Error",
+                    "printedName": "Swift.Error",
+                    "usr": "s:s5ErrorP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse(im)getError",
+            "mangledName": "$s11MopinionSDK0A8ResponseC8getErrors0E0_pSgyF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getJSONArray",
+            "printedName": "getJSONArray(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ResponseDataKey",
+                "printedName": "MopinionSDK.ResponseDataKey",
+                "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse(im)getJSONArray:",
+            "mangledName": "$s11MopinionSDK0A8ResponseC12getJSONArrayySayypGSgAA0C7DataKeyOF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getJSONObject",
+            "printedName": "getJSONObject(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String : Any]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Any]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "ProtocolComposition",
+                        "printedName": "Any"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ResponseDataKey",
+                "printedName": "MopinionSDK.ResponseDataKey",
+                "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse(im)getJSONObject:",
+            "mangledName": "$s11MopinionSDK0A8ResponseC13getJSONObjectySDySSypGSgAA0C7DataKeyOF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getString",
+            "printedName": "getString(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ResponseDataKey",
+                "printedName": "MopinionSDK.ResponseDataKey",
+                "usr": "c:@M@MopinionSDK@E@ResponseDataKey"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse(im)getString:",
+            "mangledName": "$s11MopinionSDK0A8ResponseC9getStringySSSgAA0C7DataKeyOF",
+            "moduleName": "MopinionSDK",
+            "declAttributes": [
+              "AccessControl",
+              "ObjC"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "MopinionResponse",
+                "printedName": "MopinionSDK.MopinionResponse",
+                "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse(im)init",
+            "mangledName": "$s11MopinionSDK0A8ResponseCACycfc",
+            "moduleName": "MopinionSDK",
+            "overriding": true,
+            "implicit": true,
+            "objc_name": "init",
+            "declAttributes": [
+              "Dynamic",
+              "ObjC",
+              "Override"
+            ],
+            "init_kind": "Designated"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse",
+        "mangledName": "$s11MopinionSDK0A8ResponseC",
+        "moduleName": "MopinionSDK",
+        "declAttributes": [
+          "AccessControl",
+          "ObjC",
+          "RawDocComment"
+        ],
+        "superclassUsr": "c:objc(cs)NSObject",
+        "hasMissingDesignatedInitializers": true,
+        "superclassNames": [
+          "ObjectiveC.NSObject"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CVarArg",
+            "printedName": "CVarArg",
+            "usr": "s:s7CVarArgP",
+            "mangledName": "$ss7CVarArgP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObservingPublishing",
+            "printedName": "_KeyValueCodingAndObservingPublishing",
+            "usr": "s:10Foundation37_KeyValueCodingAndObservingPublishingP",
+            "mangledName": "$s10Foundation37_KeyValueCodingAndObservingPublishingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "_KeyValueCodingAndObserving",
+            "printedName": "_KeyValueCodingAndObserving",
+            "usr": "s:10Foundation27_KeyValueCodingAndObservingP",
+            "mangledName": "$s10Foundation27_KeyValueCodingAndObservingP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomStringConvertible",
+            "printedName": "CustomStringConvertible",
+            "usr": "s:s23CustomStringConvertibleP",
+            "mangledName": "$ss23CustomStringConvertibleP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CustomDebugStringConvertible",
+            "printedName": "CustomDebugStringConvertible",
+            "usr": "s:s28CustomDebugStringConvertibleP",
+            "mangledName": "$ss28CustomDebugStringConvertibleP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MopinionCallbackEventDelegate",
+        "printedName": "MopinionCallbackEventDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onMopinionEvent",
+            "printedName": "onMopinionEvent(mopinionEvent:response:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MopinionCallbackEvent",
+                "printedName": "MopinionSDK.MopinionCallbackEvent",
+                "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MopinionResponse",
+                "printedName": "MopinionSDK.MopinionResponse",
+                "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A21CallbackEventDelegateP02onaD008mopinionD08responseyAA0acD0O_AA0A8ResponseCtF",
+            "mangledName": "$s11MopinionSDK0A21CallbackEventDelegateP02onaD008mopinionD08responseyAA0acD0O_AA0A8ResponseCtF",
+            "moduleName": "MopinionSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : MopinionSDK.MopinionCallbackEventDelegate>",
+            "sugared_genericSig": "<Self where Self : MopinionSDK.MopinionCallbackEventDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11MopinionSDK0A21CallbackEventDelegateP",
+        "mangledName": "$s11MopinionSDK0A21CallbackEventDelegateP",
+        "moduleName": "MopinionSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "MopinionCallbackEventErrorDelegate",
+        "printedName": "MopinionCallbackEventErrorDelegate",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "onMopinionEventError",
+            "printedName": "onMopinionEventError(mopinionEvent:response:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MopinionCallbackEvent",
+                "printedName": "MopinionSDK.MopinionCallbackEvent",
+                "usr": "c:@M@MopinionSDK@E@MopinionCallbackEvent"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "MopinionResponse",
+                "printedName": "MopinionSDK.MopinionResponse",
+                "usr": "c:@M@MopinionSDK@objc(cs)MopinionResponse"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:11MopinionSDK0A26CallbackEventErrorDelegateP02onadE008mopinionD08responseyAA0acD0O_AA0A8ResponseCtF",
+            "mangledName": "$s11MopinionSDK0A26CallbackEventErrorDelegateP02onadE008mopinionD08responseyAA0acD0O_AA0A8ResponseCtF",
+            "moduleName": "MopinionSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : MopinionSDK.MopinionCallbackEventErrorDelegate>",
+            "sugared_genericSig": "<Self where Self : MopinionSDK.MopinionCallbackEventErrorDelegate>",
+            "protocolReq": true,
+            "reqNewWitnessTableEntry": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Protocol",
+        "usr": "s:11MopinionSDK0A26CallbackEventErrorDelegateP",
+        "mangledName": "$s11MopinionSDK0A26CallbackEventErrorDelegateP",
+        "moduleName": "MopinionSDK",
+        "genericSig": "<τ_0_0 : AnyObject>",
+        "sugared_genericSig": "<Self : AnyObject>",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": [
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/SlideInModalTransitioningDelegate.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1357,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/SlideInModalTransitioningDelegate.swift",
+      "kind": "StringLiteral",
+      "offset": 1235,
+      "length": 33,
+      "value": "\"MopinionSDK.SlideInModalTransitioningDelegate\""
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 431,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 487,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 531,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "StringLiteral",
+      "offset": 583,
+      "length": 35,
+      "value": "\"https:\/\/mjolnir-test.mopinion.com\""
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 663,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 735,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "StringLiteral",
+      "offset": 837,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 874,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "Array",
+      "offset": 925,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "Dictionary",
+      "offset": 965,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "StringLiteral",
+      "offset": 1076,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "Dictionary",
+      "offset": 1123,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1154,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1256,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1298,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "Dictionary",
+      "offset": 1343,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "StringLiteral",
+      "offset": 1378,
+      "length": 30,
+      "value": "\"https:\/\/mjolnir.mopinion.com\""
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "Dictionary",
+      "offset": 1453,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1531,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1638,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 74457,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 75234,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 79514,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 79612,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/mopinion.swift",
+      "kind": "BooleanLiteral",
+      "offset": 79633,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/FeatureSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 689,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/FeatureSettings.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1556,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/FeatureSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1883,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/FeatureSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1906,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/FeatureSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2151,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/FeatureSettings.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2174,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/API.swift",
+      "kind": "FloatLiteral",
+      "offset": 305,
+      "length": 6,
+      "value": "1800.0"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/API.swift",
+      "kind": "StringLiteral",
+      "offset": 409,
+      "length": 16,
+      "value": "\"MFSDKDC_ITM_00\""
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/API.swift",
+      "kind": "BooleanLiteral",
+      "offset": 640,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/API.swift",
+      "kind": "StringLiteral",
+      "offset": 691,
+      "length": 7,
+      "value": "\"1.0.0\""
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/RoundedRectangleView.swift",
+      "kind": "FloatLiteral",
+      "offset": 323,
+      "length": 3,
+      "value": "4.0"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/RoundedRectangleView.swift",
+      "kind": "IntegerLiteral",
+      "offset": 391,
+      "length": 2,
+      "value": "40"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/SlideInModalPresentationController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1427,
+      "length": 3,
+      "value": "150"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/SlideInModalPresentationController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1820,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/SlideInModalPresentationController.swift",
+      "kind": "FloatLiteral",
+      "offset": 2110,
+      "length": 4,
+      "value": "0.75"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/SlideInModalPresentationController.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2629,
+      "length": 1,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/SlideInModalPresentationController.swift",
+      "kind": "StringLiteral",
+      "offset": 1271,
+      "length": 34,
+      "value": "\"MopinionSDK.SlideInModalPresentationController\""
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/MopinionCallback.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1284,
+      "length": 9,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/MopinionCallback.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1299,
+      "length": 9,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/MopinionCallback.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1284,
+      "length": 9,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/MopinionCallback.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1299,
+      "length": 9,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/MopinionCallback.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1673,
+      "length": 8,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/MopinionCallback.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1687,
+      "length": 9,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/MopinionCallback.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1673,
+      "length": 8,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/MopinionCallback.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1687,
+      "length": 9,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/MopinionCallback.swift",
+      "kind": "Dictionary",
+      "offset": 2143,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/MopinionCallback.swift",
+      "kind": "StringLiteral",
+      "offset": 2084,
+      "length": 16,
+      "value": "\"MopinionSDK.MopinionResponse\""
+    },
+    {
+      "filePath": "\/Users\/large\/Dev\/Mopinion\/MopinionSDK-native-source\/MopinionSDK\/MopinionSDK\/MopinionSDK\/MopinionCallback.swift",
+      "kind": "Dictionary",
+      "offset": 4137,
+      "length": 3,
+      "value": "[]"
+    }
+  ]
+}
