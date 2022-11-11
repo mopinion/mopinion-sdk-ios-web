@@ -19,14 +19,18 @@ Other Mopinion SDK's are also available:
 - [Using callback mode](#callback-mode)
 - [Edit triggers](#edit-triggers)
 
-## Release notes for version 0.5.1
-### Improvements in 0.5.1
-- Fixed an issue with iOS 15 where the extra/meta data and screenshot could disappear.
+## Release notes for version 0.5.2
+### Changes in 0.5.2
+- Rebuilt with Xcode 14.1, tested on iOS 16.
+- Dropped 32-bit support.
+- CocoaPods minimum iOS version raised to 11.
+- Removed an unused setting.
+- Brought forward the insertion of extra/meta data in the webform.
+- Downloaded deployments are cached and only reloaded after least 30 minutes.
 
 ### Remarks
-- This github release 0.5.1-swiftpm is our sdk version 0.5.1 repackaged for Swift Package Manager.
-- For cocoapods, use the 0.5.1 version from the master branch.
-
+- This github release 0.5.2-swiftpm is our sdk version 0.5.2 repackaged for Swift Package Manager.
+- For cocoapods, only use the 0.5.2 tagged version from the master branch. 
 
 <br>
 
@@ -34,15 +38,15 @@ Other Mopinion SDK's are also available:
 
 The Mopinion Mobile SDK Framework can be installed via either the Swift Package Manager or the popular dependency manager [Cocoapods](https://cocoapods.org).
 
-### Install via Swift Package Manager in Xcode 13
+### Install via Swift Package Manager in Xcode 14
 1. If you no longer want to use CocoaPods for your project, then in terminal, at the root folder of your project execute: <br>
 `pod deintegrate`
 
 2. Open your project's `<your-project-name>.xcodeproj` file in Xcode.
-3. In Xcode 13, from the menu, select `File -> Add Packages…`.  
+3. In Xcode 14, from the menu, select `File -> Add Packages…`.  
 The Swift Package Collections panel appears. 
 4. In the search field of the panel, enter `https://github.com/mopinion/mopinion-sdk-ios-web` and press enter.
-5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.5.1-swiftpm`.
+5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.5.2-swiftpm`.
 6. Click the button `Add Package`. A package product selection panel appears.
 7. Choose `MopinionSDK` and click the button `Add Package`. 
 
@@ -50,59 +54,21 @@ The Swift Package Collections panel appears.
 
 ### Install CocoaPods native on ARM based Macs
 
-For macOS Monterey 12.1 installation of cocoapods 1.11.2 works out of the box:
+From macOS Monterey 12.1 installation of cocoapods 1.11.2 works out of the box:
 
 ```sh
 sudo gem install cocoapods
-```
-If you had applied the below patch on macOS Big Sur 11, remove it before installation.
-
-### Patch to install earlier CocoaPods native on ARM based Macs 
-Macs with an ARM processor need a newer Ruby toolchain to use CocoaPods via a network. Not needed for cocoapods 1.11.2 and macOS Monterey, but for macOS Big Sur you can try this procedure.
-0.5.1To prevent older CocoaPods versions before 1.11 from generating ffi errors `LoadError - dlopen(/Library/Ruby/Gems/2.6.0/gems/ffi-1.14.2/lib/ffi_c.bundle, 0x0009)` causing build failures:
-
-1. Install the Xcode 12.5 (or later) *Command Line* tools (even if you already installed the full Xcode IDE version)
-2. Install [macports](https://macports.org)
-3. In terminal, execute 
-
-```sh
-sudo port install ruby27
-sudo port select --set ruby ruby27
-source .zprofile # or .profile, whereever you defined your $PATH
-sudo gem update
-sudo gem install ffi
-sudo gem install cocoapods
-```
-Tested to work with M1 on macOS Big Sur 11.4, Xcode 12.5, macports 2.7.1, ruby 2.7.3p183, cocoapods 1.10.1
-
-#### Reported native cocoapods install for homebrew users
-For homebrew users the procedure is a bit different, [according to github](https://github.com/CocoaPods/CocoaPods/issues/9907#issuecomment-835385306):
-
-1. Update to at least macOS Big Sur 11.3.1
-2. Install homebrew
-3. Update ruby to at least 2.7.3
-
-```sh
-brew install rbenv
-rbenv init
-rbenv install 2.7.3
-export RBENV_VERSION=2.7.3 # or however you set your ruby version
-```
-4. Install cocoapods 
-
-```sh
-brew install cocoapods
 ```
 
 ### Install the SDK with CocoaPods
 
-For Xcode 13, make a `Podfile` in root of your project:
+For Xcode 14, make a `Podfile` in root of your project:
 
 ```ruby
-platform :ios, '9.0'
+platform :ios, '11.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '>= 0.5.1'
+	pod 'MopinionSDKWeb', '>= 0.5.2'
 end
 ```
 
@@ -127,9 +93,9 @@ MopinionSDK.load(<MOPINION DEPLOYMENT KEY>, true)
 MopinionSDK.load(<MOPINION DEPLOYMENT KEY>)
 ```
 
-The `<MOPINION DEPLOYMENT KEY>` should be replaced with your specific deployment key. This key can be found in your Mopinion account at the `Feedback forms` section under `Deployments`.
+The `<MOPINION DEPLOYMENT KEY>` should be replaced with your specific deployment key. Copy this key using a web browser from your Mopinion account, in side menu `Data collection`, section `Deployments`, via the button with symbol `<>`.
 
-in a UIViewController, for example `ViewController.swift`, put:
+In a UIViewController, for example `ViewController.swift`, put:
 
 ```swift
 import MopinionSDK
@@ -445,4 +411,4 @@ The custom defined events can be used in combination with rules/conditions:
 * percentage (proactive trigger): % of users that should see the form  
 * date: only show the form at at, after or before a specific date or date range  
 * time: only show the form at at, after or before a specific time or time range  
-* target: the OS the form should show (iOS or Android)  
+* target: only show the form for a specific OS (iOS or Android) and optional list of versions.  
