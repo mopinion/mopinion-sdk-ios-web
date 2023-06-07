@@ -5,8 +5,8 @@ To use Mopinion mobile web feedback forms in your app you can include the SDK as
 
 Other Mopinion SDK's are also available:
 
-- [iOS SDK (React Native required)](https://github.com/mopinion/mopinion-sdk-ios)
-- [Android SDK (React Native required)](https://github.com/mopinion/mopinion-sdk-android)
+- [iOS SDK](https://github.com/Mopinion-com/mopinion-sdk-ios-swiftpm)
+- [Android SDK](https://github.com/Mopinion-com/mopinion-sdk-android)
 - [Android web SDK](https://github.com/mopinion/mopinion-sdk-android-web)
 
 ### Contents
