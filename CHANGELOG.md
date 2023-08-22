@@ -1,3 +1,10 @@
+# 0.5.2
+- Rebuilt with Xcode 14.1, tested on iOS 16.
+- Dropped 32-bit support.
+- CocoaPods minimum iOS version raised to 11.
+- Brought forward the insertion of extra/meta data in the webform.
+- Downloaded deployments are cached and only reloaded after least 30 minutes.
+
 # 0.5.1
 - Fixed an issue with iOS 15 where the extra/meta data and screenshot could disappear.
 

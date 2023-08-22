@@ -5,7 +5,7 @@ To use Mopinion mobile web feedback forms in your app you can include the SDK as
 
 Other Mopinion SDK's are also available:
 
-- [iOS SDK](https://github.com/Mopinion-com/mopinion-sdk-ios-swiftpm)
+- [iOS SDK](https://github.com/Mopinion-com/mopinion-sdk-ios)
 - [Android SDK](https://github.com/Mopinion-com/mopinion-sdk-android)
 - [Android web SDK](https://github.com/mopinion/mopinion-sdk-android-web)
 
@@ -19,18 +19,16 @@ Other Mopinion SDK's are also available:
 - [Using callback mode](#callback-mode)
 - [Edit triggers](#edit-triggers)
 
-## Release notes for version 0.5.2
-### Changes in 0.5.2
-- Rebuilt with Xcode 14.1, tested on iOS 16.
-- Dropped 32-bit support.
-- CocoaPods minimum iOS version raised to 11.
-- Removed an unused setting.
-- Brought forward the insertion of extra/meta data in the webform.
-- Downloaded deployments are cached and only reloaded after least 30 minutes.
+## Release notes for version 0.6.0
+### Changes in 0.6.0
+- Built with Xcode 14.3.1, tested on iOS 16.
+- Minimum iOS version raised to 11.
+- Calls to the evaluate(), event(), load() and openFormAlways() methods now execute in serial order.
+- Introduces new state `NO_FORM_WILL_OPEN` for callbacks.
 
 ### Remarks
-- This github release 0.5.2-swiftpm is our sdk version 0.5.2 repackaged for Swift Package Manager.
-- For cocoapods, only use the 0.5.2 tagged version from the master branch. 
+- This github release 0.6.0-swiftpm is our sdk version 0.6.0 repackaged for Swift Package Manager.
+- For cocoapods, only use the plain 0.6.0 release. 
 
 <br>
 
@@ -46,7 +44,7 @@ The Mopinion Mobile SDK Framework can be installed via either the Swift Package 
 3. In Xcode 14, from the menu, select `File -> Add Packages…`.  
 The Swift Package Collections panel appears. 
 4. In the search field of the panel, enter `https://github.com/mopinion/mopinion-sdk-ios-web` and press enter.
-5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.5.2-swiftpm`.
+5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.6.0-swiftpm`.
 6. Click the button `Add Package`. A package product selection panel appears.
 7. Choose `MopinionSDK` and click the button `Add Package`. 
 
@@ -68,7 +66,7 @@ For Xcode 14, make a `Podfile` in root of your project:
 platform :ios, '11.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '>= 0.5.2'
+	pod 'MopinionSDKWeb', '>= 0.6.0'
 end
 ```
 
@@ -235,12 +233,12 @@ class ViewController: UIViewController, MopinionOnEvaluateDelegate {
           	MopinionSDK.openFormAlways(self, formKey!)
         }else{
             if let _ = formKey {
-				// Found form wouldn't open for event
-				 // we'll open it anyway using the formKey             
-				MopinionSDK.openFormAlways(self, formKey!)
+                // Found form wouldn't open for event
+                // we'll open it anyway using the formKey
+                MopinionSDK.openFormAlways(self, formKey!)
             }else{
-				// no form found for event
-				...
+                // no form found for event
+                ...
             }
         }
     }
@@ -305,6 +303,7 @@ Parameters:
 	* `FORM_OPEN` : when the form is shown
 	* `FORM_SENT` : when the user has submitted the form
 	* `FORM_CLOSED` : when the form has closed
+	* `NO_FORM_WILL_OPEN` : when no form will open
 
 * `response`: The MopinionResponse object containing additional information on the MopinionEvent. The response is never `nil`, but use its `hasData()` methods to check if it contains any additional data, or `hasErrors()` for errors.
 
@@ -342,6 +341,10 @@ FORM_CLOSED|DATA_JSONOBJECT|Currently only automatically closed forms provide da
 
 The order in which MopinionCallbackEvents occur is:
 
+	1. NO_FORM_WILL_OPEN
+        
+        - or - 
+         
 	1. FORM_OPEN
 	2. FORM_SENT (only if the user submits a form)
 	3. FORM_CLOSED
@@ -383,8 +386,9 @@ class YourViewController: UIViewController, MopinionOnEvaluateDelegate {
                     let formKey = response.getString(.FORM_KEY) ?? ""
                     print("The form \(formKey) has beent sent and closed, now you can run some code.")
                 }
+            } else if(mopinionEvent == .NO_FORM_WILL_OPEN) {
+                print("No form will open for this event.")
             }
-
         }, onCallbackEventError: { (mopinionEvent, response) -> (Void) in
             let myError = response.getError();
             print("there was an error during callback: \(String(describing: myError))")
