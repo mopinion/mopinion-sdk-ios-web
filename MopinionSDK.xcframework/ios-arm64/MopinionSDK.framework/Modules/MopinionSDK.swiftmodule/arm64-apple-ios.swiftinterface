@@ -1,6 +1,6 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
-// swift-module-flags: -target arm64-apple-ios9.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name MopinionSDK
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name MopinionSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
 @_exported import MopinionSDK
@@ -16,24 +16,27 @@ public let MopinionSDK: MopinionSDK.Mopinion
   public var globalParentView: UIKit.UIViewController?
   final public let useWebView: Swift.Bool
   public func load(_ mopinionKey: Foundation.NSString)
+  public func load(_ mopinionKey: Swift.String)
   public func load(_ mopinionKey: Foundation.NSString, _ log: Swift.Bool)
+  public func load(_ mopinionKey: Swift.String, _ log: Swift.Bool)
   public func event(_ parentView: UIKit.UIViewController, _ event: Swift.String, onCallbackEvent: @escaping (_ mopinionEvent: MopinionSDK.MopinionCallbackEvent, _ response: MopinionSDK.MopinionResponse) -> Swift.Void, onCallbackEventError: ((_ mopinionEvent: MopinionSDK.MopinionCallbackEvent, _ response: MopinionSDK.MopinionResponse) -> Swift.Void)?)
-  public func event(_ parentView: UIKit.UIViewController, _ event: Swift.String, onCallbackEventDelegate: MopinionSDK.MopinionCallbackEventDelegate?, onCallbackEventErrorDelegate: MopinionSDK.MopinionCallbackEventErrorDelegate?)
-  public func event(_ parentView: UIKit.UIViewController, _ event: Swift.String, onCallbackEventDelegate: MopinionSDK.MopinionCallbackEventDelegate?)
+  public func event(_ parentView: UIKit.UIViewController, _ event: Swift.String, onCallbackEventDelegate: (any MopinionSDK.MopinionCallbackEventDelegate)?, onCallbackEventErrorDelegate: (any MopinionSDK.MopinionCallbackEventErrorDelegate)?)
+  public func event(_ parentView: UIKit.UIViewController, _ event: Swift.String, onCallbackEventDelegate: (any MopinionSDK.MopinionCallbackEventDelegate)?)
   public func event(_ parentView: UIKit.UIViewController, _ event: Swift.String)
   public func openFormAlways(_ parentView: UIKit.UIViewController, _ formKey: Swift.String)
   public func data(_ k: Swift.String, _ v: Swift.String)
   public func removeData(forKey k: Swift.String)
   public func removeData()
-  public func evaluate(_ event: Swift.String, onEvaluateDelegate: MopinionSDK.MopinionOnEvaluateDelegate)
+  public func evaluate(_ event: Swift.String, onEvaluateDelegate: any MopinionSDK.MopinionOnEvaluateDelegate)
   public func emptyCache()
   public func close()
   public func cleanCache()
   public func setLog(_ on: Swift.Bool = false)
+  public func semanticVersionString() -> Swift.String
   @objc deinit
 }
 extension MopinionSDK.Mopinion : UIKit.UINavigationBarDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func position(for bar: UIKit.UIBarPositioning) -> UIKit.UIBarPosition
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func position(for bar: any UIKit.UIBarPositioning) -> UIKit.UIBarPosition
 }
 extension MopinionSDK.Mopinion : UIKit.UIAdaptivePresentationControllerDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func presentationControllerDidDismiss(_ presentationController: UIKit.UIPresentationController)
@@ -51,7 +54,7 @@ public protocol MopinionOnEvaluateDelegate : AnyObject {
   func mopinionOnEvaluateHandler(hasResult: Swift.Bool, event: Swift.String, formKey: Swift.String?, response: [Swift.String : Any]?)
 }
 @objc public enum MopinionCallbackEvent : Swift.Int {
-  case FORM_CLOSED, FORM_OPEN, FORM_SENT
+  case FORM_CLOSED, FORM_OPEN, FORM_SENT, NO_FORM_WILL_OPEN
   public init?(rawValue: Swift.Int)
   public typealias RawValue = Swift.Int
   public var rawValue: Swift.Int {
@@ -77,7 +80,7 @@ public protocol MopinionOnEvaluateDelegate : AnyObject {
   public func getData(_ forKey: MopinionSDK.ResponseDataKey) -> Swift.String?
   public func getData(_ forKey: MopinionSDK.ResponseDataKey) -> [Any]?
   @objc public func getData(_ forKey: MopinionSDK.ResponseDataKey) -> [Swift.String : Any]?
-  @objc public func getError() -> Swift.Error?
+  @objc public func getError() -> (any Swift.Error)?
   @objc public func getJSONArray(_ forKey: MopinionSDK.ResponseDataKey) -> [Any]?
   @objc public func getJSONObject(_ forKey: MopinionSDK.ResponseDataKey) -> [Swift.String : Any]?
   @objc public func getString(_ forKey: MopinionSDK.ResponseDataKey) -> Swift.String?
