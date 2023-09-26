@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-compiler-version: Apple Swift version 5.9 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -Onone -module-name MopinionSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import Foundation
@@ -10,6 +10,7 @@ import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 public let MopinionSDK: MopinionSDK.Mopinion
 @objc @_inheritsConvenienceInitializers public class Mopinion : ObjectiveC.NSObject {
   @objc override dynamic public init()
@@ -23,7 +24,9 @@ public let MopinionSDK: MopinionSDK.Mopinion
   public func event(_ parentView: UIKit.UIViewController, _ event: Swift.String, onCallbackEventDelegate: (any MopinionSDK.MopinionCallbackEventDelegate)?, onCallbackEventErrorDelegate: (any MopinionSDK.MopinionCallbackEventErrorDelegate)?)
   public func event(_ parentView: UIKit.UIViewController, _ event: Swift.String, onCallbackEventDelegate: (any MopinionSDK.MopinionCallbackEventDelegate)?)
   public func event(_ parentView: UIKit.UIViewController, _ event: Swift.String)
+  @available(*, deprecated, message: "From 0.6.1 use openFormAlways(:formKey:forEvent) instead")
   public func openFormAlways(_ parentView: UIKit.UIViewController, _ formKey: Swift.String)
+  public func openFormAlways(_ parentView: UIKit.UIViewController, formKey: Swift.String, forEvent: Swift.String)
   public func data(_ k: Swift.String, _ v: Swift.String)
   public func removeData(forKey k: Swift.String)
   public func removeData()

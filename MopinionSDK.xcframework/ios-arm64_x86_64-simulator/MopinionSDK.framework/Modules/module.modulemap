@@ -1,7 +1,7 @@
 framework module MopinionSDK {
   umbrella header "MopinionSDK.h"
-
   export *
+
   module * { export * }
 }
 
