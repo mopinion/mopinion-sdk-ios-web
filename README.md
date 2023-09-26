@@ -1,7 +1,7 @@
 # Mopinion Mobile web SDK iOS
 
-The Mopinion Mobile SDK can be used to collect feedback from iOS apps based on events.
-To use Mopinion mobile web feedback forms in your app you can include the SDK as a Framework in your Xcode project.
+Use the Mopinion Mobile SDK to collect feedback from iOS apps based on events.
+Include the SDK as a Framework in your Xcode project to use Mopinion mobile web feedback forms in your app.
 
 Other Mopinion SDK's are also available:
 
@@ -19,16 +19,24 @@ Other Mopinion SDK's are also available:
 - [Using callback mode](#callback-mode)
 - [Edit triggers](#edit-triggers)
 
-## Release notes for version 0.6.0
-### Changes in 0.6.0
-- Built with Xcode 14.3.1, tested on iOS 16.
-- Minimum iOS version raised to 11.
-- Calls to the evaluate(), event(), load() and openFormAlways() methods now execute in serial order.
-- Introduces new state `NO_FORM_WILL_OPEN` for callbacks.
+## Release notes for version 0.6.1
+### Changes in 0.6.1
+- Deprecate method `openFormAlways(:)` in favour of new method `openFormAlways(:formKey:forEvent)`.
+
+### Fixes in 0.6.1
+- solves a bug in mopinion-sdk-ios-web 0.6.0 where the FORM\_CLOSED, FORM\_OPEN, FORM\_SENT callbacks from opened forms might not arrive at the caller.
+
+### Known issues with Xcode 15
+- Just like CocoaPods, the SDK currently supports iOS 11, which will trigger Xcode 15 warnings such as: 
+
+ `Pods.xcodeproj: warning: The iOS Simulator deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'MopinionSDKWeb' from project 'Pods')`
+
+ Until CocoaPods updates their support, you can ignore these warnings, update your Cocoapods project minimum OS, or use Xcode 14.3.1.
 
 ### Remarks
-- This github release 0.6.0-swiftpm is our sdk version 0.6.0 repackaged for Swift Package Manager.
-- For cocoapods, only use the plain 0.6.0 release. 
+- This readme is also included in github release 0.6.1-swiftpm, which is repackaged for Swift Package Manager. That release is not designed for cocoapods.
+- For cocoapods, only use the plain 0.6.1 release. 
+- Built with Xcode 15.0, tested on iOS 16.
 
 <br>
 
@@ -36,45 +44,46 @@ Other Mopinion SDK's are also available:
 
 The Mopinion Mobile SDK Framework can be installed via either the Swift Package Manager or the popular dependency manager [Cocoapods](https://cocoapods.org).
 
-### Install via Swift Package Manager in Xcode 14
+### Install via Swift Package Manager in Xcode 15
 1. If you no longer want to use CocoaPods for your project, then in terminal, at the root folder of your project execute: <br>
 `pod deintegrate`
 
 2. Open your project's `<your-project-name>.xcodeproj` file in Xcode.
-3. In Xcode 14, from the menu, select `File -> Add Packages…`.  
+3. In Xcode 15, from the menu, select `File -> Add Package Dependencies…`.  
 The Swift Package Collections panel appears. 
 4. In the search field of the panel, enter `https://github.com/mopinion/mopinion-sdk-ios-web` and press enter.
-5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.6.0-swiftpm`.
+5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.6.1-swiftpm`.
 6. Click the button `Add Package`. A package product selection panel appears.
 7. Choose `MopinionSDK` and click the button `Add Package`. 
 
 <br>
 
-### Install CocoaPods native on ARM based Macs
+### Install via CocoaPods 
 
-From macOS Monterey 12.1 installation of cocoapods 1.11.2 works out of the box:
+1. Install CocoaPods if you didn't have it installed yet. From macOS Monterey 12.1 installation of cocoapods 1.11.2 works out of the box on ARM based Macs:
 
-```sh
+ ```sh
 sudo gem install cocoapods
 ```
 
-### Install the SDK with CocoaPods
 
-For Xcode 14, make a `Podfile` in root of your project:
+2. In the terminal, create a `Podfile` in the folder that contains your Xcode project :
 
-```ruby
+ ```ruby
 platform :ios, '11.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '>= 0.6.0'
+	pod 'MopinionSDKWeb', '>= 0.6.1'
 end
 ```
 
-Install the needed pods:
+3. From that folder, install the needed pods:
 
-`$ pod install`
+ ```sh
+$ pod install
+```
 
-After this you should use the newly made `<your-project-name>.xcworkspace` file to open in Xcode.
+4. After this, going forward you should use the newly created `<your-project-name>.xcworkspace` file to open in Xcode.
 
 <br>
 
@@ -170,7 +179,7 @@ It can also be used on passive events, but such forms will always be allowed to 
 
 1. Call the `evaluate()` method and pass it the delegate object that implements the `MopinionOnEvaluateDelegate` protocol.
 2. In your delegate's callback method `mopinionOnEvaluateHandler()`, check the response parameters and retrieve the `formKey` if there is any.
-3. Optionally, pass the `formKey` to the method `openFormAlways()` to open your form directly, ignoring any conditions in the deployment.
+3. Optionally, pass the `formKey` and `event` to the method `openFormAlways()` to open your form directly, ignoring any conditions in the deployment.
 
 ### evaluate() method
 Evaluates whether or not a form would have opened for the specified event. If without errors, the delegate object will receive the `mopinionOnEvaluateHandler()` call with the response.
@@ -230,15 +239,15 @@ class ViewController: UIViewController, MopinionOnEvaluateDelegate {
         if(hasResult) {
             // at least one form was found and all optional parameters are non-null
             // because conditions can change every time, use the form key to open it directly
-          	MopinionSDK.openFormAlways(self, formKey!)
+          	MopinionSDK.openFormAlways(self, formKey: formKey!, forEvent: event)
         }else{
             if let _ = formKey {
-                // Found form wouldn't open for event
-                // we'll open it anyway using the formKey
-                MopinionSDK.openFormAlways(self, formKey!)
+				// Found form wouldn't open for event
+				 // we'll open it anyway using the formKey and event             
+				MopinionSDK.openFormAlways(self, formKey: formKey!, forEvent: event)
             }else{
-                // no form found for event
-                ...
+				// no form found for event
+				...
             }
         }
     }
@@ -384,7 +393,7 @@ class YourViewController: UIViewController, MopinionOnEvaluateDelegate {
             } else if(mopinionEvent == .FORM_CLOSED) {
                 if(self.wasFormSent) {
                     let formKey = response.getString(.FORM_KEY) ?? ""
-                    print("The form \(formKey) has beent sent and closed, now you can run some code.")
+                    print("The form \(formKey) has been sent and closed, now you can run some code.")
                 }
             } else if(mopinionEvent == .NO_FORM_WILL_OPEN) {
                 print("No form will open for this event.")

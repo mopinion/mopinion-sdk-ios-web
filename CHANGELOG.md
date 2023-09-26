@@ -1,3 +1,9 @@
+# 0.6.0
+- Built with Xcode 14.3.1, tested on iOS 16.
+- Minimum iOS version raised to 11.
+- Calls to the evaluate(), event(), load() and openFormAlways() methods now execute in serial order.
+- Introduces new state `NO_FORM_WILL_OPEN` for callbacks.
+
 # 0.5.2
 - Rebuilt with Xcode 14.1, tested on iOS 16.
 - Dropped 32-bit support.
