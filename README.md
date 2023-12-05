@@ -7,7 +7,7 @@ Other Mopinion SDK's are also available:
 
 - [iOS SDK](https://github.com/Mopinion-com/mopinion-sdk-ios)
 - [Android SDK](https://github.com/Mopinion-com/mopinion-sdk-android)
-- [Android web SDK](https://github.com/mopinion/mopinion-sdk-android-web)
+- [Android web SDK](https://github.com/Mopinion-com/mopinion-sdk-android-web)
 
 ### Contents
 
