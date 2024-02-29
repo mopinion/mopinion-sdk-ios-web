@@ -7,7 +7,7 @@ Other Mopinion SDK's are also available:
 
 - [iOS SDK](https://github.com/Mopinion-com/mopinion-sdk-ios)
 - [Android SDK](https://github.com/Mopinion-com/mopinion-sdk-android)
-- [Android web SDK](https://github.com/mopinion/mopinion-sdk-android-web)
+- [Android web SDK](https://github.com/Mopinion-com/mopinion-sdk-android-web)
 
 ### Contents
 
@@ -19,24 +19,25 @@ Other Mopinion SDK's are also available:
 - [Using callback mode](#callback-mode)
 - [Edit triggers](#edit-triggers)
 
-## Release notes for version 0.6.1
-### Changes in 0.6.1
-- Deprecate method `openFormAlways(:)` in favour of new method `openFormAlways(:formKey:forEvent)`.
+## Release notes for version 0.7.0
 
-### Fixes in 0.6.1
-- solves a bug in mopinion-sdk-ios-web 0.6.0 where the FORM\_CLOSED, FORM\_OPEN, FORM\_SENT callbacks from opened forms might not arrive at the caller.
+### Changes in 0.7.0
 
-### Known issues with Xcode 15
-- Just like CocoaPods, the SDK currently supports iOS 11, which will trigger Xcode 15 warnings such as: 
+- Minimum deployment target raised to iOS 12.
+- Reworked deployment condition logic: Now passive triggers will respect all deployment conditions, and  ignore the session ("Refresh condition settings per visitor after {x} days"). Only when the condition "Show only to a percentage of users" is set, a passive trigger fires only once per session. Previously, passive triggers in the sdk always ignored session and all deployment conditions. 
+- Identifies itself in the feedback inbox as "MopinionSDK iOS-web 0.7.0".
+- Reworked log messages on deployment conditions.
+- the `onCallbackEventError` closure can now also return `NO_FORM_WILL_OPEN` in its mopinionEvent argument.
 
- `Pods.xcodeproj: warning: The iOS Simulator deployment target 'IPHONEOS_DEPLOYMENT_TARGET' is set to 11.0, but the range of supported deployment target versions is 12.0 to 17.0.99. (in target 'MopinionSDKWeb' from project 'Pods')`
+### Fixes in 0.7.0
 
- Until CocoaPods updates their support, you can ignore these warnings, update your Cocoapods project minimum OS, or use Xcode 14.3.1.
+- Remove double space from the log messages.
+
 
 ### Remarks
-- This readme is also included in github release 0.6.1-swiftpm, which is repackaged for Swift Package Manager. That release is not designed for cocoapods.
-- For cocoapods, only use the plain 0.6.1 release. 
-- Built with Xcode 15.0, tested on iOS 16.
+- This readme is also included in github release 0.7.0-swiftpm, which is repackaged for Swift Package Manager. That release is not designed for cocoapods.
+- For cocoapods, only use the plain 0.7.0 release. 
+- Built with Xcode 15.2, tested on iOS 17 with CocoaPods 1.15.2.
 
 <br>
 
@@ -45,14 +46,15 @@ Other Mopinion SDK's are also available:
 The Mopinion Mobile SDK Framework can be installed via either the Swift Package Manager or the popular dependency manager [Cocoapods](https://cocoapods.org).
 
 ### Install via Swift Package Manager in Xcode 15
-1. If you no longer want to use CocoaPods for your project, then in terminal, at the root folder of your project execute: <br>
+
+1. If you no longer want to use CocoaPods for your project, then in terminal, in the root folder of your project execute: <br>
 `pod deintegrate`
 
 2. Open your project's `<your-project-name>.xcodeproj` file in Xcode.
 3. In Xcode 15, from the menu, select `File -> Add Package Dependencies…`.  
 The Swift Package Collections panel appears. 
 4. In the search field of the panel, enter `https://github.com/mopinion/mopinion-sdk-ios-web` and press enter.
-5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.6.1-swiftpm`.
+5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.7.0-swiftpm`.
 6. Click the button `Add Package`. A package product selection panel appears.
 7. Choose `MopinionSDK` and click the button `Add Package`. 
 
@@ -63,17 +65,17 @@ The Swift Package Collections panel appears.
 1. Install CocoaPods if you didn't have it installed yet. From macOS Monterey 12.1 installation of cocoapods 1.11.2 works out of the box on ARM based Macs:
 
  ```sh
-sudo gem install cocoapods
+$ sudo gem install cocoapods
 ```
 
 
 2. In the terminal, create a `Podfile` in the folder that contains your Xcode project :
 
  ```ruby
-platform :ios, '11.0'
+platform :ios, '12.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '>= 0.6.1'
+	pod 'MopinionSDKWeb', '>= 0.7.0'
 end
 ```
 
@@ -89,18 +91,18 @@ $ pod install
 
 ## <a name="implement">Implement the SDK</a>
 
-In your app code, for instance the `AppDelegate.swift` file, put:
+In your app code, for instance somewhere late in the `AppDelegate.swift` file, put:
 
 ```swift
 import MopinionSDK
 ...
 // debug mode
-MopinionSDK.load(<MOPINION DEPLOYMENT KEY>, true)
+MopinionSDK.load("<MOPINION DEPLOYMENT KEY>", true)
 // live
-MopinionSDK.load(<MOPINION DEPLOYMENT KEY>)
+MopinionSDK.load("<MOPINION DEPLOYMENT KEY>")
 ```
 
-The `<MOPINION DEPLOYMENT KEY>` should be replaced with your specific deployment key. Copy this key using a web browser from your Mopinion account, in side menu `Data collection`, section `Deployments`, via the button with symbol `<>`.
+Replace the `<MOPINION DEPLOYMENT KEY>` by your specific deployment key. Copy this key using a web browser from your Mopinion account, in side menu `Data collection`, section `Deployments`, via the button with symbol `<>`.
 
 In a UIViewController, for example `ViewController.swift`, put:
 
@@ -111,7 +113,7 @@ MopinionSDK.event(self, "_button")
 ```
 where `"_button"` is the default passive form event.
 You can also make custom events and use them in the Mopinion deployment interface.  
-In the Mopinion system you can enable or disable the feedback form when a user of your app executes the event.
+In the Mopinion web app you can enable or disable the feedback form when a user of your app executes the event.
 The event could be a touch of a button, at the end of a transaction, proactive, etc.
 
 <br>
@@ -155,12 +157,7 @@ Example:
 MopinionSDK.removeData(forKey: "first name")
 ```
 
-To remove all supplied extra data use this method without arguments:
-
-```swift
-MopinionSDK.removeData()
-```
-Example:
+To remove all supplied extra data use this method without arguments, like for example:
 
 ```swift
 MopinionSDK.removeData()
@@ -169,9 +166,9 @@ MopinionSDK.removeData()
 <br>
 
 ## <a name="evaluate-conditions">Evaluate if a form will open</a>
-The event() method of the SDK autonomously checks deployment conditions and opens a form, or not.
+The `event()` method of the SDK autonomously checks deployment conditions and opens a form, or not.
 
-From SDK version `0.4.6` you can use the evaluate() and related methods to give your app more control on opening a form for proactive events or take actions when no form would have opened.
+From SDK version `0.4.6` you can use the `evaluate()` and related methods to give your app more control on opening a form for proactive events or take actions when no form would have opened.
 
 It can also be used on passive events, but such forms will always be allowed to open.
 
@@ -185,13 +182,14 @@ It can also be used on passive events, but such forms will always be allowed to 
 Evaluates whether or not a form would have opened for the specified event. If without errors, the delegate object will receive the `mopinionOnEvaluateHandler()` call with the response.
 
 ```swift
-public func evaluate( _ event: String, onEvaluateDelegate: MopinionOnEvaluateDelegate )
+func evaluate( _ event: String, onEvaluateDelegate: MopinionOnEvaluateDelegate )
 
 ```
 Parameters:
 
 * `event`: The name of the event as definied in the deployment. For instance "_button".
 * `onEvaluateDelegate `: The object implementing the `MopinionOnEvaluateDelegate` protocol to handle the `mopinionOnEvaluateHandler()` callback method.
+
 
 ### mopinionOnEvaluateHandler() method
 Method where the app receives the response of the evaluate call. Defined by the `MopinionOnEvaluateDelegate` protocol. Note that in case of any system errors this may not be called at all.
@@ -203,19 +201,22 @@ Parameters:
 
 * `hasResult`: if true then the form identified by the formKey would have opened. If false then the form would not have opened and the formKey might be null in case no forms were found associated with the event.
 * `event`: the original event name that was passed to the evaluate call to check in the deployment.
-* `formKey`: identifying key of the first feedback form found associated with the event. Only one formKey will be selected even if multiple forms matched the event name in the deployment.
+* `formKey`: identifying key of the first feedback form found associated with the event and meeting the deployment conditions. Only one formKey will be selected even if multiple forms matched the event name in the deployment.
 * `response`: optional dictionary object for extra response details on success/failure and forms. Reserved for future extensions.
 
+
 ### openFormAlways() method
-Opens the form specified by the formkey, regardless of any proactive conditions set in the deployment.
+Opens the form specified by the formkey for the event, regardless of any deployment conditions.
 
 ```swift
-public func openFormAlways(_ parentView: UIViewController,_ formKey: String) 
+func openFormAlways(_ parentView: UIViewController, formKey: String, forEvent: event)
 ```
 Parameters:
 
 * `parentView`: Your UIViewController object that can act as a parent view controller for the SDK.
 * `formKey`: key of a feedback form as provided by the mopinionOnEvaluateHandler() call.
+* `forEvent`: The same event as passed to the `evaluate()` call. For instance "_button".
+
 
 ### Example of using evaluate()
 This snippet of pseudo code highlights the key points on how the aforementioned procedure fits together to implement the `MopinionOnEvaluateDelegate` protocol.
@@ -232,22 +233,22 @@ class ViewController: UIViewController, MopinionOnEvaluateDelegate {
         // check if a form would open                       
         MopinionSDK.evaluate("_myproactiveevent", onEvaluateDelegate: self)
         // the actual result will be in the mopinionOnEvaluateHandler call
-	}
+    }
 ...
 	// callback handler for protocol MopinionOnEvaluateDelegate
     func mopinionOnEvaluateHandler(hasResult: Bool, event: String, formKey: String?, response: [String : Any]?) {
         if(hasResult) {
             // at least one form was found and all optional parameters are non-null
             // because conditions can change every time, use the form key to open it directly
-          	MopinionSDK.openFormAlways(self, formKey: formKey!, forEvent: event)
+            MopinionSDK.openFormAlways(self, formKey: formKey!, forEvent: event)
         }else{
             if let _ = formKey {
-				// Found form wouldn't open for event
-				 // we'll open it anyway using the formKey and event             
-				MopinionSDK.openFormAlways(self, formKey: formKey!, forEvent: event)
+                // Found form wouldn't open for event
+                // we'll open it anyway using the formKey and event
+                MopinionSDK.openFormAlways(self, formKey: formKey!, forEvent: event)
             }else{
-				// no form found for event
-				...
+                // no form found for event
+                ...
             }
         }
     }
@@ -312,7 +313,7 @@ Parameters:
 	* `FORM_OPEN` : when the form is shown
 	* `FORM_SENT` : when the user has submitted the form
 	* `FORM_CLOSED` : when the form has closed
-	* `NO_FORM_WILL_OPEN` : when no form will open
+	* `NO_FORM_WILL_OPEN` : when no form will open. Is not considered an error, unless the event tried to show a form that no longer exists.
 
 * `response`: The MopinionResponse object containing additional information on the MopinionEvent. The response is never `nil`, but use its `hasData()` methods to check if it contains any additional data, or `hasErrors()` for errors.
 
@@ -338,6 +339,7 @@ This is the data that can be present for a certain MopinionCallbackEvent:
 
 MopinionCallbackEvent|ResponseDataKeys|Remarks
 ---|---|---
+NO\_FORM\_WILL_OPEN|FORM_KEY|form key is optional
 FORM_OPEN|DATA_JSONOBJECT|
 &nbsp;|FORM_KEY|
 &nbsp;|FORM_NAME|
@@ -399,10 +401,14 @@ class YourViewController: UIViewController, MopinionOnEvaluateDelegate {
                 print("No form will open for this event.")
             }
         }, onCallbackEventError: { (mopinionEvent, response) -> (Void) in
-            let myError = response.getError();
-            print("there was an error during callback: \(String(describing: myError))")
+            if(mopinionEvent == .NO_FORM_WILL_OPEN) {
+                print("Form for key does not exist or failed to load.")
+            } else {
+                let myError = response.getError();
+                print("there was an error during callback: \(String(describing: myError))")
+            }
         } )
-	}
+   }
 ...
 }
 ...
@@ -412,16 +418,17 @@ class YourViewController: UIViewController, MopinionOnEvaluateDelegate {
 
 ## <a name="edit-triggers">Edit triggers</a>
 
-In the Mopinion deployment editor you can define event names and triggers that will work with the SDK event names that you used in your app.
+In the deployment editor of the Mopinion web app you can define event names and triggers that will work with the SDK event names that you used in your app.
 Login to your Mopinion account and go to Data collection, Deployments to use this functionality.
 
 ![Deployment Editor](images/deployment_edit_triggers.png)
 
-The custom defined events can be used in combination with rules/conditions:
+The custom defined events can be used in combination with deployment rules/conditions valid per deployed app instance:
 
-* trigger: `passive` or `proactive`. A passive form always shows when the event is triggered. A proactive form only shows once, you can set the refresh duration after which the form should show again. 
-* submit: allow opening a proactive form until it has been submitted at least once. This affects the trigger rule, to allow opening a form more than once. Support for this appeared in SDK version 0.4.3.
-* percentage (proactive trigger): % of users that should see the form  
-* date: only show the form at at, after or before a specific date or date range  
-* time: only show the form at at, after or before a specific time or time range  
-* target: only show the form for a specific OS (iOS or Android) and optional list of versions.  
+* **trigger**: `passive` or `proactive`. A proactive trigger can show its form only once; you can set the refresh duration after which the trigger can fire again. A passive trigger behaves almost the same, but can fire every time as it ignores the refresh duration (except when the percentage condition is set).
+* **refresh duration**: the number of days to wait before the trigger can fire again in an app instance, specified by the setting "Refresh condition settings per visitor after {x} days".
+* **submit**: allow opening a proactive form until it has been submitted at least once. This affects the trigger rule, to allow opening a form more than once. Support for this appeared in SDK version 0.4.3.
+* **percentage**: % of users that should see the form. This setting makes the trigger fire once per refresh duration, even if no form was shown or it is a passive trigger.
+* **date**: only show the form on, after or before a specific date or date range.
+* **time**: only show the form at, after or before a specific time or time range.
+* **target**: only show the form for a specific OS (iOS or Android) and optional list of versions.
