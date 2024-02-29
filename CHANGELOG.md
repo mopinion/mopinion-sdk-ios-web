@@ -1,3 +1,8 @@
+# 0.6.1
+- Built with Xcode 15.0, tested on iOS 16.
+- Deprecate method `openFormAlways(:)` in favour of new method `openFormAlways(:formKey:forEvent)`.
+- solves a bug in mopinion-sdk-ios-web 0.6.0 where the FORM\_CLOSED, FORM\_OPEN, FORM\_SENT callbacks from opened forms might not arrive at the caller.
+
 # 0.6.0
 - Built with Xcode 14.3.1, tested on iOS 16.
 - Minimum iOS version raised to 11.
