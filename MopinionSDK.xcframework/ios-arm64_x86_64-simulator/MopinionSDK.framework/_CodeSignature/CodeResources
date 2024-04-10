@@ -6,7 +6,7 @@
 	<dict>
 		<key>Headers/MopinionSDK-Swift.h</key>
 		<data>
-		kxh0NGLD0i+q4asMaUHa1A2ztwc=
+		DoxYJXjO2dXia/k4QCyXKbFshzs=
 		</data>
 		<key>Headers/MopinionSDK.h</key>
 		<data>
@@ -14,51 +14,55 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		V0J8pQZWNi/7NCOIJceJKDceIsk=
+		7tGgE1LehbRW8YkVa4bOYaxpgDA=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		DvU8AYLp1cc+tMtvRumtthJphXo=
+		uyODk4jIGHux0VAQsm3cZ7X8TVs=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		LxI+cP2qLU1TI3Z2SP2iHqPBEEs=
+		ogIzvjBm5zGq43QUVSYS5x2q4zU=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		4sETmhSa53N98JuDkdec34RoNLA=
+		FlwI1mO9PXXnQikdfL97hlbaEAc=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		LxI+cP2qLU1TI3Z2SP2iHqPBEEs=
+		ogIzvjBm5zGq43QUVSYS5x2q4zU=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		COGgnkQxDymQlR5/uPSaGso8TNk=
+		Cs9VDTFooEYqPjkwSJE6V02nge0=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		DvU8AYLp1cc+tMtvRumtthJphXo=
+		uyODk4jIGHux0VAQsm3cZ7X8TVs=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		bftqohYavnjL5JUB9U4e8dmfkjA=
+		vrrvcMdTxnNz1lw1YHoJLVs23NU=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		/qGxR1l/1hSVOq1/OWxgnA69Btk=
+		B6Oq6LxgIxu4zYU9ZBXlVd2Nmw0=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		bftqohYavnjL5JUB9U4e8dmfkjA=
+		vrrvcMdTxnNz1lw1YHoJLVs23NU=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		apYzR2xlCek8Vf62oM/IlTQgdhI=
+		lKB1GFxQO7iSRK4BVJQpGuX8wYM=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		kuX4nV/b6aIkNiYE1RHw16vGcCQ=
+		</data>
+		<key>PrivacyInfo.xcprivacy</key>
+		<data>
+		VEhjocORkWieOuakGdzLrjoUDQU=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -67,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			IQXHhtUUAl42CWZQEehPYR9y7oLyY9bPO1Kk5aJp+8k=
+			6AmmtW1zoFDe2gxUKzKRtagT9oTBjOkooLhh0u4K9FQ=
 			</data>
 		</dict>
 		<key>Headers/MopinionSDK.h</key>
@@ -81,70 +85,70 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			ooh2gep/2uhAlArfqzQLdVYfA7s/X084Y4j6WHMC0HY=
+			FJLGxY+kNe6YVz+1MBl9LRFioOZ2iT6SFXDj+8lVpfA=
 			</data>
 		</dict>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7TEUIIjXe5/bsU86t/lEGU6W87C5A93AgeRyWCYBbcw=
+			0esIv0qriDda0m01Mp8zmauQBJkmk2p/YPwZu7dKyWw=
 			</data>
 		</dict>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			rnraG88nsAOtaljgFTAjBX7/8BBI1WfMHLqA5ndbDVo=
+			Mi+h8vjUFKbavzNjuT02PCaxuZTvmpmxW7fPEGbTbkU=
 			</data>
 		</dict>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7TEUIIjXe5/bsU86t/lEGU6W87C5A93AgeRyWCYBbcw=
+			0esIv0qriDda0m01Mp8zmauQBJkmk2p/YPwZu7dKyWw=
 			</data>
 		</dict>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jbObPPJbbcWyNp8OVNthuxi9iyGx1wzprXJ/5ZLw14c=
+			1OCfBwbxsGzzrFqU+ranBDa5W3/9K0X3DknjZfsJmpM=
 			</data>
 		</dict>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ooh2gep/2uhAlArfqzQLdVYfA7s/X084Y4j6WHMC0HY=
+			FJLGxY+kNe6YVz+1MBl9LRFioOZ2iT6SFXDj+8lVpfA=
 			</data>
 		</dict>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6nzO8+cbYMQBzajHvZSvH/o2JW7yIn0vprqKP0CLFbw=
+			b10sKhutRIS+nJr3a0vJb7+m6NexT62cilbC8l9wYac=
 			</data>
 		</dict>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pOCGSaWoMuS6N4pU9xbf+nMivPdotPUvz3z+0uLmHd8=
+			VHcFxhMCtfuZpx0Ci60u8O/18YArrDGsY7kEMWHuLHk=
 			</data>
 		</dict>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			6nzO8+cbYMQBzajHvZSvH/o2JW7yIn0vprqKP0CLFbw=
+			b10sKhutRIS+nJr3a0vJb7+m6NexT62cilbC8l9wYac=
 			</data>
 		</dict>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XRPkDNn7xiuzcTKVcPMJHHVCi3qj0xhoBfGcJbs1F5I=
+			pSSzG+MI9q0xEWzav80w0Mpe9gV7aaJoVBT5kS5Py50=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -152,6 +156,13 @@
 			<key>hash2</key>
 			<data>
 			0CUL3JMyUg38VF8WEU4FmrfddU1VGMoMr1kWvTqiSHw=
+			</data>
+		</dict>
+		<key>PrivacyInfo.xcprivacy</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			yD2PxCzUPAFaup2cpjTM22p2XgM9aV1p8JRdDbbcDWQ=
 			</data>
 		</dict>
 	</dict>

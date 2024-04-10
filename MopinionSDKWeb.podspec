@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
 
   # ―――  Spec Metadata  ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.name         = "MopinionSDKWeb"
-  s.version      = "0.7.0"
+  s.version      = "0.7.1"
   s.summary      = "Mopinion iOS web SDK"
   s.description  = "Mopinion mobile web SDK for iOS. Build dynamic customizable customer feedback forms for your iOS app."
   s.homepage     = "https://mopinion.com"
@@ -19,6 +19,8 @@ Pod::Spec.new do |s|
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.source = {:git => "https://github.com/mopinion/mopinion-sdk-ios-web.git", :tag => s.version}
+  s.changelog 	= "https://raw.githubusercontent.com/mopinion/mopinion-sdk-ios-web/master/CHANGELOG.md"
+  s.readme 		= "https://raw.githubusercontent.com/mopinion/mopinion-sdk-ios-web/master/README.md"
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   s.ios.vendored_frameworks = 'MopinionSDK.xcframework'
