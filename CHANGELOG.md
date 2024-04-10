@@ -1,3 +1,12 @@
+# 0.7.0
+- Built with Xcode 15.2, tested on iOS 17.
+- Minimum iOS version raised to 12.
+- Reworked deployment condition logic: Now passive triggers will respect all deployment conditions. Passive triggers ignore the session ("Refresh condition settings per visitor after {x} days"), except for when the condition `"Show only to a percentage of users"` is set. Previously, passive triggers in the sdk always ignored session and all deployment conditions.
+- Identifies itself in the feedback inbox as "MopinionSDK iOS-web 0.7.0".
+- Reworked log messages on deployment conditions.
+- Removed double space from the log messages.
+- the `onCallbackEventError` closure can now also return `NO_FORM_WILL_OPEN` in its mopinionEvent argument.
+
 # 0.6.1
 - Built with Xcode 15.0, tested on iOS 16.
 - Deprecate method `openFormAlways(:)` in favour of new method `openFormAlways(:formKey:forEvent)`.
