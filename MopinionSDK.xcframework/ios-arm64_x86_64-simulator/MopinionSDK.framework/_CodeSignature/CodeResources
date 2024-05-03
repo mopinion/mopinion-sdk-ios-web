@@ -14,11 +14,11 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		7tGgE1LehbRW8YkVa4bOYaxpgDA=
+		x8qbkdPl8sckPvu+Bg1AQ/LyyVI=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		uyODk4jIGHux0VAQsm3cZ7X8TVs=
+		2nn0RvL/nS4G3YEdjn1mw4iYK0k=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -34,11 +34,11 @@
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Cs9VDTFooEYqPjkwSJE6V02nge0=
+		cgFy4LpHLJ2QEf7VNQrmpURsw4w=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		uyODk4jIGHux0VAQsm3cZ7X8TVs=
+		2nn0RvL/nS4G3YEdjn1mw4iYK0k=
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -54,7 +54,7 @@
 		</data>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		lKB1GFxQO7iSRK4BVJQpGuX8wYM=
+		TYwCQR0MSmqF+vUFJwdv3i0Nf+A=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>PrivacyInfo.xcprivacy</key>
 		<data>
-		VEhjocORkWieOuakGdzLrjoUDQU=
+		TARtfNLdpjsUhffwLqNZdI8SuIA=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -85,7 +85,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			FJLGxY+kNe6YVz+1MBl9LRFioOZ2iT6SFXDj+8lVpfA=
+			i1GDGMKS/0adhsBM30eTIrsYKLmVn7Q1n0Bya/SiMqs=
 			</data>
 		</dict>
 		<key>Modules/MopinionSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -113,14 +113,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1OCfBwbxsGzzrFqU+ranBDa5W3/9K0X3DknjZfsJmpM=
+			nuewNB4QGRq0fjOKUN9NcwcptP7MopTjjFOq60E9sgA=
 			</data>
 		</dict>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			FJLGxY+kNe6YVz+1MBl9LRFioOZ2iT6SFXDj+8lVpfA=
+			i1GDGMKS/0adhsBM30eTIrsYKLmVn7Q1n0Bya/SiMqs=
 			</data>
 		</dict>
 		<key>Modules/MopinionSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -148,7 +148,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pSSzG+MI9q0xEWzav80w0Mpe9gV7aaJoVBT5kS5Py50=
+			s0C+ypZ63DeK4fvbC6wjWnRskEzz5LIHWXAdtYTtQF8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -162,7 +162,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yD2PxCzUPAFaup2cpjTM22p2XgM9aV1p8JRdDbbcDWQ=
+			kJ76tf742OVg2+NkeSDQ/Q8tZt5pyufuMEUGQXa236w=
 			</data>
 		</dict>
 	</dict>

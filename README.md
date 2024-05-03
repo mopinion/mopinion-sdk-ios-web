@@ -19,16 +19,19 @@ Other Mopinion SDK's are also available:
 - [Using callback mode](#callback-mode)
 - [Edit triggers](#edit-triggers)
 
-## Release notes for version 0.7.1
+## Release notes for version 0.7.2
 
-### New in 0.7.1
+### New in 0.7.2
 
-- The SDK declares Apple's NSPrivacyAccessedAPITypeReasons for using the UserDefaults API. Our SDK only accesses the data that it has written itself to the UserDefaults. It uses it to store limited functional state, in order to prevent showing a form that the user has already seen.
+- Adds NSPrivacyCollectedDataTypes to Apple's PrivacyInfo, in order to let apps using the SDK pass Xcode privacy reports. Note that actually this should not have been required as the SDK meets the criteria that [Apple states in "... data that may not need to be disclosed include data collected in optional feedback forms ..."](https://developer.apple.com/app-store/app-privacy-details/#optional-disclosure). The collected data types that leave the device are: 
+	- “Other user content” (for all data that a user submits in a form), 
+	- “Photos or videos” (the user can submit a screenshot), 
+	- “Other diagnostic data” (system version and sdk version for support)
 
 
 ### Remarks
-- This readme is also included in github release 0.7.1-swiftpm, which is repackaged for Swift Package Manager. That release is not designed for cocoapods.
-- For cocoapods, only use the plain 0.7.1 release.
+- This readme is also included in github release 0.7.2-swiftpm, which is repackaged for Swift Package Manager. That release is not designed for cocoapods.
+- For cocoapods, only use the plain 0.7.2 release.
 - Built with Xcode 15.3, tested on iOS 17 with CocoaPods 1.15.2.
 
 <br>
@@ -46,7 +49,7 @@ The Mopinion Mobile SDK Framework can be installed via either the Swift Package 
 3. In Xcode 15, from the menu, select `File -> Add Package Dependencies…`.  
 The Swift Package Collections panel appears. 
 4. In the search field of the panel, enter `https://github.com/mopinion/mopinion-sdk-ios-web` and press enter.
-5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.7.1-swiftpm`.
+5. From the drop-down button `Dependency Rule` , choose `Exact Version` and in the version field enter `0.7.2-swiftpm`.
 6. Click the button `Add Package`. A package product selection panel appears.
 7. Choose `MopinionSDK` and click the button `Add Package`. 
 
@@ -67,7 +70,7 @@ $ sudo gem install cocoapods
 platform :ios, '12.0'
 use_frameworks!
 target '<YOUR TARGET>' do
-	pod 'MopinionSDKWeb', '>= 0.7.1'
+	pod 'MopinionSDKWeb', '>= 0.7.2'
 end
 ```
 
