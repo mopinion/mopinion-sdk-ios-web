@@ -1,3 +1,7 @@
+# 0.7.1
+- Built with Xcode 15.3, tested on iOS 17.
+- The SDK declares Apple's NSPrivacyAccessedAPITypeReasons for using the UserDefaults API. Our SDK only accesses the data that it has written itself to the UserDefaults. It uses it to store limited functional state, in order to prevent showing a form that the user has already seen.
+
 # 0.7.0
 - Built with Xcode 15.2, tested on iOS 17.
 - Minimum iOS version raised to 12.
