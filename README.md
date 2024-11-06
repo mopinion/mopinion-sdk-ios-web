@@ -1,5 +1,11 @@
-# Mopinion Mobile web SDK iOS
+# Mopinion Mobile web SDK iOS up to version 0.7.2
 
+## From November 2024, version 0.7.3 and later, this repo has moved to a new location, see:
+- [github.com/Mopinion-com/mopinion-sdk-ios-web](https://github.com/Mopinion-com/mopinion-sdk-ios-web) for CocoaPods and 
+- [mopinion-sdk-ios-web-swiftpm](https://github.com/Mopinion-com/mopinion-sdk-ios-web-swiftpm) for Swift Package Manager
+
+## This is the README for the 0.7.2-swiftpm version.
+ 
 Use the Mopinion Mobile SDK to collect feedback from iOS apps based on events.
 Include the SDK as a Framework in your Xcode project to use Mopinion mobile web feedback forms in your app.
 
